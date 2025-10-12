@@ -1,35 +1,11 @@
 import { useEffect, useState } from "react";
 import { Menu, Search, ShoppingBasket, X } from "lucide-react";
 import { Link } from "react-router";
-
+import { navList } from "../data/navLink";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [ isMenuOpen, setIsMenuOpen ] = useState(false)
-
-
-  const navLinks = [
-    {
-      name: "Catalog",
-      path: "/"
-    },
-     {
-      name: "Payment",
-      path: "/"
-    },
-     {
-      name: "Reviems",
-      path: "/"
-    },
-     {
-      name: "Contacts",
-      path: "/"
-    },
-     {
-      name: "Company",
-      path: "/"
-    },
-  ]
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,30 +21,35 @@ const Navbar = () => {
     <div className="flex justify-center text-white">
       <nav
         className={`fixed w-full top-0 transition-all duration-300 ease-in-out z-50 ${
-          isVisible ? "shadow-lg rounded-[25px] top-5 border border-white" : "bg-transparent"
+          isVisible
+            ? "shadow-lg top-5 text-base bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl"
+            : "bg-transparent"
         }`}
-        style={{ 
+        style={{
           width: isVisible ? "80%" : "100%",
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           <div className="flex justify-between h-14 items-center">
-
             {/*       Logo        */}
             <div className="flex-shrink-0">
               {/* <span className="text-xl font-bold text-gray-800">Logo</span> */}
-              <h1 className="flex items-center text-2xl font-bold text-[#B1B1B]">Biagiachie<span className="">fz</span></h1>
+              <h1 className="flex items-center text-2xl font-bold text-[#B1B1B]">
+                Biagiachie<span className="">fz</span>
+              </h1>
             </div>
 
             {/*     Dektop Nav      */}
             <div className="hidden md:flex space-x-4">
-              {
-             navLinks.map((item, index) => (
+              {navList.map((item, index) => (
                 <Link
                   key={index}
                   to={item.path}
-                  className="hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium text-white"
+                  className="px-3 py-2 rounded-md text-sm font-medium text-white relative inline-block hover:text-[#7E62F3] 
+         before:absolute before:bottom-0 before:left-0 
+         before:h-[1px] before:w-0 before:bg-[#7E62F3] 
+         before:transition-all before:duration-300 
+         hover:before:w-full"
                 >
                   {item.name}
                 </Link>
@@ -76,41 +57,38 @@ const Navbar = () => {
             </div>
 
             {/*          Dekstop Right           */}
-            
-
 
             {/*     Mobile menu nav before click   */}
-            <div className="md:hidden flex gap-4" style={ 
-              { color: isVisible ? "#1B1B1B" : "white"}
-            }>
-                 <Search />
+            <div
+              className="md:hidden flex gap-4"
+              style={{ color: isVisible ? "#1B1B1B" : "white" }}
+            >
+              <Search />
               <ShoppingBasket />
               <button onClick={() => setIsMenuOpen(true)}>
-              <Menu/>
+                <Menu />
               </button>
             </div>
 
             {/*    after burger menu click   */}
-            <div className={`fixed top-0 left-0 w-full h-screen bg-white text-base flex flex-col md:hidden items-center justify-center gap-6 font-medium text-gray-800 transition-all duration-500 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"}`}>
-              <button className="absolute top-4 right-4" onClick={() => setIsMenuOpen(false)}>
-                <X size={35}/>
+            <div
+              className={`fixed top-0 left-0 w-full h-screen bg-white text-base flex flex-col md:hidden items-center justify-center gap-6 font-medium text-gray-800 transition-all duration-500 ${
+                isMenuOpen ? "translate-x-0" : "-translate-x-full"
+              }`}
+            >
+              <button
+                className="absolute top-4 right-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <X size={35} />
               </button>
 
-               {
-             navLinks.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.path}
-                  className=""
-                >
+              {navList.map((item, index) => (
+                <Link key={index} to={item.path} className="">
                   {item.name}
                 </Link>
               ))}
-
             </div>
-
-
-
           </div>
         </div>
       </nav>
