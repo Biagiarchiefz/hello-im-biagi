@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 const Interested = () => {
   return (
-    <div className='px-[160px] mt-[150px] h-[50vh] text-[#EDF0F7]'>
+    <div className='px-[160px] mt-[150px] text-[#EDF0F7]'>
       <div className="h-[138px] rounded-[3px] flex justify-between items-center px-8 bg-[#7E62F3]/10">
             <h1 className='text-4xl font-bold'>Interested working with me?</h1>
             <div className="flex gap-4">
