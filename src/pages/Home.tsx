@@ -1,8 +1,17 @@
 import myName from "../assets/img/myName.png";
 import aboutMe from "../assets/img/ABOUT ME-b.png";
 import fhoto from "../assets/img/fhoto.png";
-import myWorks from "../assets/img/MY WORKS-b.png"
-import { Dribbble, Github, Instagram, Linkedin, MoveRight } from "lucide-react";
+import project2 from "../assets/img/project 2.png";
+import myWorks from "../assets/img/MY WORKS-b.png";
+import {
+  Dribbble,
+  Github,
+  Instagram,
+  Linkedin,
+  MoveRight,
+  TvMinimalPlay,
+} from "lucide-react";
+import Interested from "@/components/Interested";
 
 const Home = () => {
   return (
@@ -77,19 +86,16 @@ const Home = () => {
             </p>
             <p>
               {" "}
-              Here are some of the technologies I’ve learned: <br /> → HTML <br /> → CSS <br /> →
-              JavaScript <br /> → React.js
+              Here are some of the technologies I’ve learned: <br /> → HTML{" "}
+              <br /> → CSS <br /> → JavaScript <br /> → React.js
             </p>
           </div>
         </div>
       </div>
 
-
-
       {/* Project Section */}
-      <div className="h-[50vh] px-[160px] mt-20">
-
-         <div className="title relative">
+      <div className="px-[160px] mt-20">
+        <div className="title relative">
           <h1 className="text-[#7E62F3] font-bold text-5xl pt-3 px-11 w-full relative flex justify-end">
             MY WORKS
           </h1>
@@ -100,17 +106,71 @@ const Home = () => {
           />
         </div>
 
-        <div className="">
-          <div className="">
-            <h3>Project 01</h3>
-            <h1></h1>
+        <div className="text-[#EDF0F7] flex mt-20 relative">
+          <div className="flex flex-col gap-1 pt-5">
+            <h3 className="font-semibold text-[#7E62F3]">Project 01</h3>
+            <h1 className="text-3xl font-bold">Spotify Clone</h1>
+            <div className="max-w-[500px] z-10 py-5 px-4 mt-3 rounded-[5px] bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg">
+              <p className="line-clamp-5 leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                dolor nam eaque corporis asperiores iure sequi dignissimos,
+                voluptates adipisci perspiciatis ut debitis aliquid pariatur
+                reiciendis nisi quia, provident iste facere voluptatem
+                consequuntur esse nobis sed vel excepturi! Fuga quasi beatae et
+                nobis! Reprehenderit debitis ut inventore, laudantium nam
+                quaerat, incidunt obcaecati numquam aperiam eum omnis
+                perspiciatis asperiores optio modi. Cupiditate, pariatur enim!
+                Facere saepe, ipsam reprehenderit eius hic harum libero?
+              </p>
+            </div>
+            <p className="max-w-[430px]">[Php] [MySql]</p>
+            <div className="flex gap-3 mt-2 ">
+              <Github />
+              <TvMinimalPlay />
+            </div>
           </div>
 
-          <img src="" alt="" />
-
+          <img
+            src={project2}
+            alt=""
+            className="max-w-[761px] absolute right-0"
+          />
         </div>
 
+        <div className="text-[#EDF0F7] flex mt-20 relative">
+          <div className="flex flex-col gap-1 pt-5">
+            <h3 className="font-semibold text-[#7E62F3]">Project 01</h3>
+            <h1 className="text-3xl font-bold">Spotify Clone</h1>
+            <div className="max-w-[500px] z-10 py-5 px-4 mt-3 rounded-[5px] bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg">
+              <p className="line-clamp-5 leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                dolor nam eaque corporis asperiores iure sequi dignissimos,
+                voluptates adipisci perspiciatis ut debitis aliquid pariatur
+                reiciendis nisi quia, provident iste facere voluptatem
+                consequuntur esse nobis sed vel excepturi! Fuga quasi beatae et
+                nobis! Reprehenderit debitis ut inventore, laudantium nam
+                quaerat, incidunt obcaecati numquam aperiam eum omnis
+                perspiciatis asperiores optio modi. Cupiditate, pariatur enim!
+                Facere saepe, ipsam reprehenderit eius hic harum libero?
+              </p>
+            </div>
+            <p className="max-w-[430px]">[Php] [MySql]</p>
+            <div className="flex gap-3 mt-2 ">
+              <Github />
+              <TvMinimalPlay />
+            </div>
+          </div>
+
+          <img
+            src={project2}
+            alt=""
+            className="max-w-[761px] absolute right-0"
+          />
+        </div>
       </div>
+
+      {/* Interested working */}
+      <Interested />
     </div>
   );
 };
