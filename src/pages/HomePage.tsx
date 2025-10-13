@@ -5,10 +5,11 @@ import fhoto from "../assets/img/fhoto.png";
 import myWorks from "../assets/img/MY WORKS-b.png";
 import { Dribbble, Github, Instagram, Linkedin, MoveRight } from "lucide-react";
 import Interested from "@/components/Interested";
-import Project from "@/components/Project";
+import ProjectSection from "@/components/ProjectSection";
 import { projects } from "@/data/projects";
+import { Link } from "react-router";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="bg-[#141414]">
       {/* section 1 profile */}
@@ -30,16 +31,26 @@ const Home = () => {
             </p>
 
             <div className="flex items-center gap-5 mt-8">
+                <Link to="/contact">
               <div className="group px-3 py-2 rounded-full flex items-center gap-5 border shadow-lg hover:shadow-xl hover:icon hover:cursor-p">
                 Let`s talk
                 <div className="p-1 rounded-full border">
                   <MoveRight className="w-5 h-5 group-hover:-rotate-45 transition-all duration-300 ease-in-out" />
                 </div>
               </div>
-              <Linkedin className="text-[#7E62F3]" />
-              <Github className="text-[#7E62F3]" />
-              <Dribbble className="text-[#7E62F3]" />
-              <Instagram className="text-[#7E62F3]" />
+                </Link>
+              <Link to="www.linkedin.com/in/biagiarchiefz">
+                <Linkedin className="text-[#7E62F3]" />
+              </Link>
+              <Link to="https://github.com/Biagiarchiefz">
+                <Github className="text-[#7E62F3]" />
+              </Link>
+              <Link to="https://dribbble.com/Biagii">
+                <Dribbble className="text-[#7E62F3]" />
+              </Link>
+              <Link to="https://www.instagram.com/biagiarchiefz/">
+                <Instagram className="text-[#7E62F3]" />
+              </Link>
             </div>
           </div>
         </div>
@@ -102,7 +113,7 @@ const Home = () => {
         </div>
 
         {projects.map((project) => (
-          <Project key={project.id} project={project} />
+          <ProjectSection key={project.id} project={project} />
         ))}
       </div>
 
@@ -112,4 +123,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

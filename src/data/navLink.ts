@@ -11,7 +11,7 @@ export const navList: nav[] = [
     },
      {
       name: "Project",
-      path: "/project"
+      path: "/projects"
     },
      {
       name: "Contact",

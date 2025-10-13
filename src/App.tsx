@@ -1,8 +1,14 @@
 import { Route, Routes } from "react-router";
 // import "./App.css";
-import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
+import ProjectPage from "./pages/ProjectPage";
+
+
+
 
 function App() {
   return (
@@ -10,7 +16,10 @@ function App() {
       <Navbar />
       <div className="min-h-[70vh]">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<ProjectPage/>} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
       <Footer />
