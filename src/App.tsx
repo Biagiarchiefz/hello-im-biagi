@@ -6,12 +6,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-[#141414]">
+    <div className=" bg-[#141414]">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Footer/>
+      <div className="min-h-[70vh]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }
