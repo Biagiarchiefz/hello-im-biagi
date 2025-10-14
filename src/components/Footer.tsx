@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="bg-[#7E62F3] mt-[150px] text-[#EDF0F7] px-[50px] py-[50px]">
+    <div className="bg-[#7E62F3] text-[#EDF0F7] p-[50px]">
       <div className="flex flex-col gap-8">
         <div className="flex gap-5 text-xl">
           <Link to="https://www.linkedin.com/in/biagiarchiefz/">Linkedin</Link>
