@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Menu, Search, ShoppingBasket, X } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { navList } from "../data/navLink";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
       <nav
         className={`fixed w-full top-0 transition-all duration-300 ease-in-out z-50 ${
           isVisible
-            ? "shadow-lg top-5 text-base bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl"
+            ? "shadow-lg top-5 text-base bg-[#EDF0F7]/10 backdrop-blur-lg rounded-xl"
             : "bg-transparent"
         }`}
         style={{
@@ -45,11 +46,16 @@ const Navbar = () => {
                 <Link
                   key={index}
                   to={item.path}
-                  className="px-3 py-2 rounded-md text-sm font-medium text-white relative inline-block hover:text-[#7E62F3] 
+                  className={`px-3 py-2 rounded-md text-sm font-medium text-white relative inline-block hover:text-[#7E62F3] 
          before:absolute before:bottom-0 before:left-0 
          before:h-[1px] before:w-0 before:bg-[#7E62F3] 
          before:transition-all before:duration-300 
-         hover:before:w-full"
+         hover:before:w-full
+            ${
+              location.pathname === item.path
+                ? "text-[#7E62F3] before:w-full"
+                : "before:w-0 hover:before:w-full"
+            }`}
                 >
                   {item.name}
                 </Link>

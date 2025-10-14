@@ -12,7 +12,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
               Project 0{project.id}
             </h3>
             <h1 className="text-3xl font-bold">{project.name}</h1>
-            <div className="max-w-[500px] w-[500px] z-10 py-5 px-4 mt-3 rounded-[5px] bg-white/10 backdrop-blur-lg shadow-lg border-r-4 border-r-[#7E62F3] ">
+            <div className="max-w-[500px] w-[500px] z-10 py-5 px-4 mt-3 rounded-[5px] bg-[#EDF0F7]/10 backdrop-blur-lg shadow-lg border-r-4 border-r-[#7E62F3] ">
               <p className="line-clamp-5 leading-relaxed min-h-[100px]">
                 {project.description}
               </p>
@@ -39,7 +39,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
               Project 0{project.id}
             </h3>
             <h1 className="text-3xl font-bold">{project.name}</h1>
-            <div className="max-w-[500px] w-[500px] z-10 py-5 px-4 mt-3 rounded-[5px] bg-white/10 backdrop-blur-lg shadow-lg border-l-4 border-l-[#7E62F3] ">
+            <div className="max-w-[500px] w-[500px] z-10 py-5 px-4 mt-3 rounded-[5px] bg-[#EDF0F7]/10 backdrop-blur-lg shadow-lg border-l-4 border-l-[#7E62F3] ">
               <p className="line-clamp-5 leading-relaxed min-h-[100px]">
                 {project.description}
               </p>

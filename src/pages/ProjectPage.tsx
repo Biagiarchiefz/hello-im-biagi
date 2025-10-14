@@ -3,10 +3,11 @@ import thingDone from "../assets/img/thingsDone.png";
 import ProjectSection from "@/components/ProjectSection";
 import { projects } from "@/data/projects";
 import Interested from "@/components/Interested";
+import PageTransition from "@/components/PageTransition";
 
 const ProjectPage = () => {
   return (
-    <>
+    <PageTransition>
       <div className="text-white px-[160px] mt-20">
         <div className="title relative">
           <h1 className="text-[#7E62F3] font-bold text-5xl relative pt-25 flex justify-start">
@@ -24,7 +25,7 @@ const ProjectPage = () => {
         ))}
       </div>
       <Interested />
-    </>
+    </PageTransition>
   );
 };
 

@@ -1,10 +1,11 @@
 import React from "react";
 import contactMe from "../assets/img/contactMe-b.png";
 import { Mail, MapPinned, PhoneCall } from "lucide-react";
+import PageTransition from "@/components/PageTransition";
 
 const ContactPage = () => {
   return (
-    <>
+    <PageTransition>
       <div className="text-white px-[160px] mt-20">
         <div className="title relative">
           <h1 className="text-[#7E62F3] font-bold text-5xl relative pt-15 px-11 flex justify-center">
@@ -41,7 +42,7 @@ const ContactPage = () => {
       <div className="text-[#7E62F3] mt-40 mb-[25px] px-[50px]">
         <h1 className="text-5xl font-semibold">Let`s work together!</h1>
       </div>
-    </>
+    </PageTransition>
   );
 };
 
