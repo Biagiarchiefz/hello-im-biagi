@@ -31,4 +31,13 @@ export const projects: Project[] = [
     liveDemo: "/",
     image: project3
   },
+   {
+    id: 4,
+    name: "Personal Website",
+    description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veniam explicabo unde minus laborum dolore? Quam magni commodi sint nihil,nisi enim porro! Laudantium hic exercitationem omnis odio optio fugit eiusaliquid facilis accusamus nostrum autem sunt tempore, recusandae velit estsequi maiores numquam totam, illum iste harum. Alias, in.",
+    technologies: ["Html", "Css", "JavaScript"],
+    github: "/github/shopease",
+    liveDemo: "/shopease",
+    image: project2
+  },
 ]

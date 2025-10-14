@@ -1,13 +1,13 @@
 import React from "react";
-import contactMe from "../assets/img/Contact Me-b (1).png";
-import { Mail, MapPin, PhoneCall } from "lucide-react";
+import contactMe from "../assets/img/contactMe-b.png";
+import { Mail, MapPinned, PhoneCall } from "lucide-react";
 
 const ContactPage = () => {
   return (
     <>
       <div className="text-white px-[160px] mt-20">
         <div className="title relative">
-          <h1 className="text-[#7E62F3] font-bold text-5xl relative pt-16 px-11 flex justify-center">
+          <h1 className="text-[#7E62F3] font-bold text-5xl relative pt-15 px-11 flex justify-center">
             CONTACT ME
           </h1>
           <img
@@ -17,23 +17,23 @@ const ContactPage = () => {
           />
         </div>
 
-        <div className="flex justify-around mt-30">
-          <div className="flex flex-col gap-2 items-center">
+        <div className="flex justify-around mt-20">
+          <div className="flex flex-col gap-2 items-center p-8 flex-1">
             <PhoneCall size={35} className="text-[#7E62F3]" />
             <h3 className="text-2xl font-xl">Call or Message</h3>
             <p className="text-xl font-xl">081249746332</p>
           </div>
 
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center p-8 flex-1">
             <Mail size={35} className="text-[#7E62F3]" />
             <h3 className="text-2xl font-xl">Email</h3>
-            <p className="text-xl font-xl">example@mail.com</p>
+            <p className="text-xl font-xl">biagiiarchie@gmail.com</p>
           </div>
 
-          <div className="flex flex-col gap-2 items-center">
-            <MapPin size={35} className="text-[#7E62F3]" />
+          <div className="flex flex-col gap-2 items-center p-8 flex-1">
+            <MapPinned size={35} className="text-[#7E62F3]" />
             <h3 className="text-2xl font-xl">Location</h3>
-            <p className="text-xl font-xl">123 Main St, Anytown, USA</p>
+            <p className="text-xl font-xl">Bandung, Indonesia</p>
           </div>
         </div>
       </div>

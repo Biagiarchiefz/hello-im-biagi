@@ -112,7 +112,7 @@ const HomePage = () => {
           />
         </div>
 
-        {projects.map((project) => (
+        {projects.slice(0, 3).map((project) => (
           <ProjectSection key={project.id} project={project} />
         ))}
       </div>

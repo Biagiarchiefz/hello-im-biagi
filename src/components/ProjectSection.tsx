@@ -7,7 +7,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
     <>
       {project.id % 2 === 0 ? (
         <div className="text-[#EDF0F7] flex mt-25 relative">
-          <div className="flex flex-col gap-1 pt-5 items-end w-full">
+          <div className="flex flex-col gap-1 pt-5 items-end w-full py-10">
             <h3 className="font-semibold text-[#7E62F3]">
               Project 0{project.id}
             </h3>
@@ -34,7 +34,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
         </div>
       ) : (
         <div className="text-[#EDF0F7] flex mt-25 relative">
-          <div className="flex flex-col gap-1 pt-5 w-full">
+          <div className="flex flex-col gap-1 pt-5 w-full py-10 ">
             <h3 className="font-semibold text-[#7E62F3]">
               Project 0{project.id}
             </h3>
