@@ -13,17 +13,17 @@ function App() {
   return (
     <AnimatePresence mode="wait">
       <div className=" bg-[#141414]">
-        {location.pathname !== "/livedemo" && <Navbar />}
+        {location.pathname !== "/livedemonotfound" && <Navbar />}
 
         <div className="md:min-h-[70vh] ">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/livedemo" element={<LiveDemo />} />
+            <Route path="/livedemonotfound" element={<LiveDemo />} />
           </Routes>
         </div>
-        {location.pathname !== "/livedemo" && <Footer />}
+        {location.pathname !== "/livedemonotfound" && <Footer />}
       </div>
     </AnimatePresence>
   );

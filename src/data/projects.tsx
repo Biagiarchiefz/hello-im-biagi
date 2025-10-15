@@ -11,7 +11,7 @@ export const projects: Project[] = [
     description: "This is a music-themed website I built using PHP and MySQL. It features an admin page where data such as songs, artists, and podcasts can be easily managed through CRUD operations. This project helped me understand how to connect front-end interfaces with databases.",
     technologies: ["Php", "MySQL"],
     github: "https://github.com/Biagiarchiefz/pw2024_tubes_233040006",
-    liveDemo: "/livedemo",
+    liveDemo: "/livedemonotfound",
     image: project1
   },
   {
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description: "This project is a website clone I created using HTML and CSS, based on a design I discovered on Dribbble. Through this project, I practiced turning creative UI designs into real, functional web pages while improving my attention to detail and layout techniques.",
     technologies: ["Html", "Css"],
     github: "https://github.com/Biagiarchiefz/rumahku.id",
-    liveDemo: "/livedemo",
+    liveDemo: "/livedemonotfound",
     image: project3
   },
    {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "This project is a Pinterest-inspired UI clone that I developed using React and Tailwind CSS. It helped me practice converting beautiful UI designs into real, responsive web pages and deepened my understanding of React components and styling with Tailwind.",
     technologies: ["React", "Tailwind"],
     github: "https://github.com/Biagiarchiefz/learntoweb",
-    liveDemo: "/livedemo",
+    liveDemo: "/livedemonotfound",
     image: project4
   },
 ]
