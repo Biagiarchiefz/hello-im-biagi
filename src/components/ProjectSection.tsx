@@ -23,8 +23,12 @@ const ProjectSection = ({ project }: { project: Project }) => {
                 {project.technologies.map((tech) => ` [${tech}]`)}
               </p>
               <div className="flex gap-3 mt-2 ">
-                <Github />
-                <TvMinimalPlay />
+                <Link to={project.github}>
+                  <Github />
+                </Link>
+                <Link to={project.liveDemo}>
+                  <TvMinimalPlay />
+                </Link>
               </div>
             </div>
 

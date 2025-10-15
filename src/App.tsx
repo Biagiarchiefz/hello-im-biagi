@@ -6,21 +6,24 @@ import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import ProjectPage from "./pages/ProjectPage";
 import { AnimatePresence } from "motion/react";
+import LiveDemo from "./pages/LiveDemo";
 
 function App() {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait">
       <div className=" bg-[#141414]">
-        <Navbar />
+        {location.pathname !== "/livedemo" && <Navbar />}
+
         <div className="md:min-h-[70vh] ">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/livedemo" element={<LiveDemo />} />
           </Routes>
         </div>
-        <Footer />
+        {location.pathname !== "/livedemo" && <Footer />}
       </div>
     </AnimatePresence>
   );
