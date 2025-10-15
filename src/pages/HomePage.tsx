@@ -83,7 +83,7 @@ const HomePage = () => {
               alt=""
               className="w-[250px] md:w-[375px] object-contain"
             />
-            <div className="text-[#EDF0F7] w-[360px] md:w-[743px] flex flex-col gap-8 mt-5 text-[13px] md:text-lg">
+            <div className="text-[#EDF0F7] w-[340px] md:w-[743px] flex flex-col gap-8 mt-5 text-[13px] md:text-lg">
               <p className="">
                 I’m a Front-End Developer and an undergraduate student at
                 Pasundan University. I enjoy learning new things and
