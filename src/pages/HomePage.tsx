@@ -16,7 +16,6 @@ const HomePage = () => {
   return (
     <PageTransition>
       <div className="bg-[#141414]">
-        
         {/* section 1 profile */}
         <div className="md:h-[100vh] flex items-center relative">
           <motion.img
@@ -34,9 +33,9 @@ const HomePage = () => {
                 Biagi Archie Fais, <br /> Front-End Developer
               </motion.h1>
               <p className="text-[13px] md:text-xl max-w-[547px]">
-                Self-taught Front-End developer based in Indonesia.Currently,
-                I'm focused on improving my knowledge of front-end technology
-                and am open to collaboration.
+                Front-End Developer based in Indonesia, continuously learning
+                and exploring front-end technologies. Open for collaboration and
+                creative opportunities.
               </p>
 
               <div className="flex items-center gap-3 md:gap-5 mt-3 md:mt-8">
@@ -44,7 +43,7 @@ const HomePage = () => {
                   <div className="text-[13px] md:text-lg group px-2 py-1 md:px-3 md:py-2 rounded-full flex items-center gap-1 md:gap-3 border shadow-lg hover:shadow-xl hover:icon hover:cursor-p">
                     Let`s talk
                     <div className="p-1 rounded-full border">
-                      <MoveRight className="w-4 h-4 md:w-5 md:h-5 group-hover:-rotate-45 transition-all duration-300 ease-in-out" />
+                      <MoveRight className="w-4 h-4 md:w-5 md:h-5 group-active:-rotate-45 md:group-hover:-rotate-45 transition-all duration-300 ease-in-out" />
                     </div>
                   </div>
                 </Link>
@@ -79,30 +78,25 @@ const HomePage = () => {
           </div>
 
           <div className="flex flex-col items-center md:flex-row md:justify-between md:mt-15">
-            <img src={fhoto} alt="" className="w-[250px] md:w-[375px] object-contain" />
-            <div className="text-[#EDF0F7] w-[365px] md:w-[743px] flex flex-col gap-8 mt-10 text-[13px] md:text-lg ">
+            <img
+              src={fhoto}
+              alt=""
+              className="w-[250px] md:w-[375px] object-contain"
+            />
+            <div className="text-[#EDF0F7] w-[365px] md:w-[743px] flex flex-col gap-8 mt-5 text-[13px] md:text-lg">
               <p className="">
-                Hello! My name is Biagi. My interest in web development started
-                in 2016 when I accidentally opened the inspect element tab on a
-                site which ended up tweaking the appearance of the website and
-                in the end taught me a lot about HTML and CSS.
+                I’m a Front-End Developer and an undergraduate student at
+                Pasundan University. I enjoy learning new things and
+                continuously improving my skills in modern web development.
               </p>
               <p>
-                However, it was only at the end of 2020 that I began to focus on
-                deepening my knowledge about web development by taking courses
-                from Dicoding through a scholarship program in collaboration
-                with Indosat Ooredoo (IDCamp), several classes from BuildWith
-                Angga and also Udemy.
+                My current tech stack includes HTML, CSS, Tailwind CSS, Figma,
+                React, JavaScript, TypeScript, and Next.js.
               </p>
               <p>
-                My main goal is to become a reliable Front-End Developer, but it
-                is also possible to become a Full-Stack JavaScript Developer
-                because I also study technology in Back-End development.
-              </p>
-              <p>
-                {" "}
-                Here are some of the technologies I’ve learned: <br /> → HTML{" "}
-                <br /> → CSS <br /> → JavaScript <br /> → React.js
+                I’m passionate about building user-friendly and visually
+                appealing web interfaces, and I’m always excited to explore new
+                technologies and collaborate on creative projects.
               </p>
             </div>
           </div>
@@ -111,7 +105,7 @@ const HomePage = () => {
         {/* Project Section */}
         <div className="px-[20px] md:px-[160px] mt-10 md:mt-20">
           <div className="title relative">
-            <h1 className="text-[#7E62F3] font-bold text-[25px] md:text-5xl pt-3 px-11 w-full relative flex justify-end">
+            <h1 className="text-[#7E62F3] font-bold text-[25px] md:text-5xl md:pt-5 px-5 w-full relative flex justify-end">
               MY WORKS
             </h1>
             <img

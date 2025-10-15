@@ -42,7 +42,7 @@ const ContactPage = () => {
     //     <h1 className="text-5xl font-semibold">Let`s work together!</h1>
     //   </div>
     // </PageTransition>
-     <PageTransition>
+    <PageTransition>
       <div className="text-white px-[20px] md:px-[160px] mt-10 md:mt-20">
         {/* Title Section */}
         <div className="title relative mb-10 md:mb-0">
@@ -52,7 +52,7 @@ const ContactPage = () => {
           <img
             src={contactMe}
             alt=""
-            className="w-[300px] md:w-[773px] absolute top-0 left-1/2 -translate-x-1/2 opacity-50 md:opacity-100"
+            className="w-[300px] md:w-[773px] absolute top-10 left-1/2 -translate-x-1/2 opacity-50 md:opacity-100"
           />
         </div>
 
@@ -61,22 +61,24 @@ const ContactPage = () => {
           {/* Phone */}
           <div className="flex flex-col gap-2 items-center p-6 md:p-8 flex-1 bg-white/5 md:bg-transparent rounded-lg md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
             <PhoneCall size={30} className="text-[#7E62F3] md:size-[35px]" />
-            <h3 className="text-xl md:text-2xl font-semibold">Call or Message</h3>
-            <a 
-              href="tel:+62812497463332"
-              className="text-lg md:text-xl hover:text-[#7E62F3] transition-colors"
-            >
-              081249746332
-            </a>
+            <h3 className="text-xl md:text-2xl font-semibold">
+              <a
+                href="tel:+62812497463332"
+                className="text-lg md:text-xl active:text-[#7E62F3] transition-colors"
+              >
+                Call or Message
+              </a>
+            </h3>
+            081249746332
           </div>
 
           {/* Email */}
           <div className="flex flex-col gap-2 items-center p-6 md:p-8 flex-1 bg-white/5 md:bg-transparent rounded-lg md:rounded-none backdrop-blur-sm md:backdrop-blur-none">
             <Mail size={30} className="text-[#7E62F3] md:size-[35px]" />
             <h3 className="text-xl md:text-2xl font-semibold">Email</h3>
-            <a 
+            <a
               href="mailto:biagiiarchie@gmail.com"
-              className="text-lg md:text-xl hover:text-[#7E62F3] transition-colors break-all text-center"
+              className="text-lg md:text-xl active:text-[#7E62F3] transition-colors break-all text-center"
             >
               biagiiarchie@gmail.com
             </a>

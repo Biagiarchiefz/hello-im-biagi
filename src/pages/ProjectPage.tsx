@@ -36,7 +36,7 @@ const ProjectPage = () => {
           <img
             src={thingDone}
             alt=""
-            className="w-[300px] md:w-[773px] absolute top-0 left-0 opacity-50 md:opacity-100"
+            className="w-[300px] md:w-[773px] absolute top-5 md:top-0 left-0 opacity-50 md:opacity-100"
           />
         </div>
 

@@ -45,17 +45,17 @@ const ProjectSection = ({ project }: { project: Project }) => {
               />
 
               {/* Glass overlay */}
-              <div className="absolute inset-0 bg-[#141414]/80 backdrop-blur-md group-active:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 gap-3">
+              <div className="absolute inset-0 bg-[#141414]/80 backdrop-blur-md group-active:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 ">
                 <h3 className="font-semibold text-[#7E62F3]">
                   Project 0{project.id}
                 </h3>
                 <h1 className="text-2xl font-bold">{project.name}</h1>
-                <p className="text-sm line-clamp-3 leading-relaxed">
+                <p className="text-sm line-clamp-2 leading-relaxed">
                   {project.description}
                 </p>
-                <p className="text-xs">
+                {/* <p className="text-xs">
                   {project.technologies.map((tech) => ` [${tech}]`)}
-                </p>
+                </p> */}
                 <div className="flex gap-3 mt-2">
                   <Link to={project.github}>
                     <Github size={20} />
@@ -111,17 +111,17 @@ const ProjectSection = ({ project }: { project: Project }) => {
               />
 
               {/* Glass overlay */}
-              <div className="absolute inset-0 bg-[#141414]/80 backdrop-blur-md group-active:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 gap-3">
+              <div className="absolute inset-0 bg-[#141414]/80 backdrop-blur-md group-active:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <h3 className="font-semibold text-[#7E62F3]">
                   Project 0{project.id}
                 </h3>
                 <h1 className="text-2xl font-bold">{project.name}</h1>
-                <p className="text-sm line-clamp-3 leading-relaxed">
+                <p className="text-sm line-clamp-2 leading-relaxed">
                   {project.description}
                 </p>
-                <p className="text-xs">
+                {/* <p className="text-xs">
                   {project.technologies.map((tech) => ` [${tech}]`)}
-                </p>
+                </p> */}
                 <div className="flex gap-3 mt-2">
                   <Link to={project.github}>
                     <Github size={20} />

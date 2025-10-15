@@ -52,8 +52,8 @@ const Navbar = () => {
           <div className="flex justify-between h-14 items-center">
             {/*       Logo        */}
             <div className="flex-shrink-0">
-              <h1 className="flex items-center text-2xl font-bold text-[#B1B1B]">
-                Biagiachie<span className="">fz</span>
+              <h1 className="flex items-center md:text-2xl font-bold text-[#B1B1B] pl-2">
+                Biagiachiefz
               </h1>
             </div>
 
