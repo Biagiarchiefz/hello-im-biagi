@@ -1,4 +1,4 @@
-import React from "react";
+
 import thingDone from "../assets/img/thingsDone.png";
 import ProjectSection from "@/components/ProjectSection";
 import { projects } from "@/data/projects";

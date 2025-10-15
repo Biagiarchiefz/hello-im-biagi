@@ -1,4 +1,3 @@
-import React from "react";
 import contactMe from "../assets/img/contactMe-b.png";
 import { Mail, MapPinned, PhoneCall } from "lucide-react";
 import PageTransition from "@/components/PageTransition";
