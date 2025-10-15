@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
-import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
 import { AnimatePresence } from "motion/react";
 
@@ -17,7 +16,6 @@ function App() {
         <div className="md:min-h-[70vh] ">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
