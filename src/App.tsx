@@ -14,7 +14,7 @@ function App() {
     <AnimatePresence mode="wait">
       <div className=" bg-[#141414]">
         <Navbar />
-        <div className="min-h-[70vh]">
+        <div className="md:min-h-[70vh] ">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
