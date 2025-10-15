@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router";
-
 const LiveDemo = () => {
   return (
     <div className="bg-[rgb(20,20,20)] h-[100vh] flex flex-col justify-center items-center text-white">
