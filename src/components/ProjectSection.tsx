@@ -23,12 +23,12 @@ const ProjectSection = ({ project }: { project: Project }) => {
                 {project.technologies.map((tech) => ` [${tech}]`)}
               </p>
               <div className="flex gap-3 mt-2 ">
-                <Link to={project.github}>
+                <a href={project.github} target="_blank">
                   <Github />
-                </Link>
-                <Link to={project.liveDemo}>
+                </a>
+                <a href={project.liveDemo} target="_blank">
                   <TvMinimalPlay />
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -61,12 +61,12 @@ const ProjectSection = ({ project }: { project: Project }) => {
                   {project.technologies.map((tech) => ` [${tech}]`)}
                 </p> */}
                 <div className="flex gap-3 mt-2">
-                  <Link to={project.github}>
+                  <a href={project.github} target="_blank">
                     <Github size={20} />
-                  </Link>
-                  <Link to={project.liveDemo}>
+                  </a>
+                  <a href={project.liveDemo} target="_blank">
                     <TvMinimalPlay size={20} />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -89,12 +89,12 @@ const ProjectSection = ({ project }: { project: Project }) => {
                 {project.technologies.map((tech) => ` [${tech}]`)}
               </p>
               <div className="flex gap-3 mt-2 ">
-                <Link to={project.github}>
-                  <Github />
-                </Link>
-                <Link to={project.liveDemo}>
-                  <TvMinimalPlay />
-                </Link>
+                <a href={project.github} target="_blank">
+                  <Github size={20} />
+                </a>
+                <a href={project.liveDemo} target="_blank">
+                  <TvMinimalPlay size={20} />
+                </a>
               </div>
             </div>
 
@@ -127,17 +127,16 @@ const ProjectSection = ({ project }: { project: Project }) => {
                   {project.technologies.map((tech) => ` [${tech}]`)}
                 </p> */}
                 <div className="flex gap-3 mt-2">
-                  <Link to={project.github}>
+                  <a href={project.github} target="_blank">
                     <Github size={20} />
-                  </Link>
-                  <Link to={project.liveDemo}>
+                  </a>
+                  <a href={project.liveDemo} target="_blank">
                     <TvMinimalPlay size={20} />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       )}
     </>

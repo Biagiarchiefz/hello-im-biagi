@@ -2,7 +2,7 @@ import type { Project } from "@/interface/projects";
 import project1 from "../assets/img/project1.png";
 import project2 from "../assets/img/project2.png";
 import project3 from "../assets/img/project3.png";
-import project4 from "../assets/img/project4.png";
+import project4 from "../assets/img/terraplant.webp";
 
 export const projects: Project[] = [
   {
@@ -20,25 +20,26 @@ export const projects: Project[] = [
     description: "My first personal website built with HTML, CSS, and JavaScript — a simple project that helped me learn the basics of building and styling web pages.",
     technologies: ["Html", "Css", "JavaScript"],
     github: "https://github.com/Biagiarchiefz/portfolio-v1",
-    liveDemo: "/https://biagiarchiefz.github.io/portfolio-v1/",
+    liveDemo: "https://biagiarchiefz.github.io/portfolio-v1/",
     image: project2
   },
-   {
+     {
     id: 3,
+    name: "TerraPlant",
+    description: "Terraplant is a web-based e-commerce application focused on selling ornamental plants, including both indoor and outdoor varieties. The application is developed using a full-stack MERN architecture (MongoDB, Express.js, React.js, and Node.js) and leverages Prisma as an ORM to efficiently and systematically manage and integrate the database.",
+    technologies: ["React", "Tailwind", "Node js", "Express", "MonggoDB", "Prisma"],
+    github: "https://github.com/Biagiarchiefz/terraplant-be",
+    liveDemo: "https://terraplant-fe.vercel.app/",
+    image: project4
+  },
+   {
+    id: 4,
     name: "Rumahku.Id",
     description: "This project is a website clone I created using HTML and CSS, based on a design I discovered on Dribbble. Through this project, I practiced turning creative UI designs into real, functional web pages while improving my attention to detail and layout techniques.",
     technologies: ["Html", "Css"],
     github: "https://github.com/Biagiarchiefz/rumahku.id",
-    liveDemo: "/livedemonotfound",
+    liveDemo: "https://biagiarchiefz.github.io/rumahku.id/",
     image: project3
   },
-   {
-    id: 4,
-    name: "LearnToWeb",
-    description: "This project is a Pinterest-inspired UI clone that I developed using React and Tailwind CSS. It helped me practice converting beautiful UI designs into real, responsive web pages and deepened my understanding of React components and styling with Tailwind.",
-    technologies: ["React", "Tailwind"],
-    github: "https://github.com/Biagiarchiefz/learntoweb",
-    liveDemo: "/livedemonotfound",
-    image: project4
-  },
+
 ]

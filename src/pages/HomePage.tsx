@@ -86,17 +86,22 @@ const HomePage = () => {
             <div className="text-[#EDF0F7] px-[20px] w-[360px] md:w-[743px] flex flex-col gap-8 mt-5 text-[13px] md:text-lg">
               <p className="">
                 I’m a Front-End Developer and an undergraduate student at
-                Pasundan University. I enjoy learning new things and
+                Pasundan University, with a growing focus on becoming a
+                Full-Stack Developer. I enjoy learning new things and
                 continuously improving my skills in modern web development.
               </p>
               <p>
                 My current tech stack includes HTML, CSS, Tailwind CSS, Figma,
-                React, JavaScript, TypeScript, and Next.js.
+                React, JavaScript, TypeScript, and Next.js. Recently, I’ve also
+                expanded my expertise into backend development using Node.js and
+                Express, allowing me to build and integrate RESTful APIs and
+                manage server-side logic.
               </p>
               <p>
                 I’m passionate about building user-friendly and visually
-                appealing web interfaces, and I’m always excited to explore new
-                technologies and collaborate on creative projects.
+                appealing web interfaces while also understanding how systems
+                work behind the scenes. I’m always excited to explore new
+                technologies and collaborate on creative and impactful projects.
               </p>
             </div>
           </div>
