@@ -1,6 +1,6 @@
 import { Github, TvMinimalPlay } from "lucide-react";
 import type { Project } from "@/interface/projects";
-import { Link } from "react-router";
+
 
 const ProjectSection = ({ project }: { project: Project }) => {
   return (
