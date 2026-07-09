@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import ProjectPage from "./pages/ProjectPage";
 import ProjectDetail from "./pages/ProjectDetail";
+import ExperiencePage from "./pages/ExperiencePage";
 import { AnimatePresence } from "motion/react";
 import LiveDemo from "./pages/LiveDemo";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
+            <Route path="/experience" element={<ExperiencePage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/livedemonotfound" element={<LiveDemo />} />
           </Routes>

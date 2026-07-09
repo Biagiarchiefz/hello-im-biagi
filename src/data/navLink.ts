@@ -10,6 +10,10 @@ export const navList: nav[] = [
       path: "/projects"
     },
      {
+      name: "Experience",
+      path: "/experience"
+    },
+     {
       name: "Contact",
       path: "/contact"
     },
