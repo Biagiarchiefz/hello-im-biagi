@@ -39,6 +39,9 @@ const AsciiPortrait = ({ src, className, cropBottom = 1 }: AsciiPortraitProps) =
     let height = 0;
     let fontSize = 7;
     let startTime = 0;
+    let ready = false; // image decoded & particles built
+    let inView = false; // canvas visible in the viewport
+    let running = false; // rAF loop currently scheduled
     const mouse = { x: -9999, y: -9999 };
     const reducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -148,6 +151,17 @@ const AsciiPortrait = ({ src, className, cropBottom = 1 }: AsciiPortraitProps) =
       raf = requestAnimationFrame(tick);
     };
 
+    // only animate while the canvas is actually on screen
+    const startLoop = () => {
+      if (running || !ready || !inView) return;
+      running = true;
+      raf = requestAnimationFrame(tick);
+    };
+    const stopLoop = () => {
+      running = false;
+      cancelAnimationFrame(raf);
+    };
+
     const onPointerMove = (e: PointerEvent) => {
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
@@ -166,17 +180,29 @@ const AsciiPortrait = ({ src, className, cropBottom = 1 }: AsciiPortraitProps) =
     });
     observer.observe(container);
 
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        inView = entry.isIntersecting;
+        if (inView) startLoop();
+        else stopLoop();
+      },
+      { rootMargin: "80px" },
+    );
+    io.observe(container);
+
     img
       .decode()
       .then(() => {
         build();
-        raf = requestAnimationFrame(tick);
+        ready = true;
+        startLoop();
       })
       .catch(() => {});
 
     return () => {
-      cancelAnimationFrame(raf);
+      stopLoop();
       observer.disconnect();
+      io.disconnect();
       container.removeEventListener("pointermove", onPointerMove);
       container.removeEventListener("pointerleave", onPointerLeave);
     };

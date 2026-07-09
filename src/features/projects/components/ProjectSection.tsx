@@ -36,6 +36,8 @@ const ProjectSection = ({ project }: { project: Project }) => {
             <Link to={`/projects/${project.id}`}>
               <img
                 src={project.image}
+                loading="lazy"
+                decoding="async"
                 alt={project.name}
                 className="md:max-w-[761px] absolute left-0 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
               />
@@ -48,6 +50,8 @@ const ProjectSection = ({ project }: { project: Project }) => {
               <Link to={`/projects/${project.id}`}>
                 <img
                   src={project.image}
+                loading="lazy"
+                decoding="async"
                   alt={project.name}
                   className="w-full h-auto"
                 />
@@ -106,6 +110,8 @@ const ProjectSection = ({ project }: { project: Project }) => {
             <Link to={`/projects/${project.id}`}>
               <img
                 src={project.image}
+                loading="lazy"
+                decoding="async"
                 alt={project.name}
                 className=" md:max-w-[761px] absolute right-0 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
               />
@@ -118,6 +124,8 @@ const ProjectSection = ({ project }: { project: Project }) => {
               <Link to={`/projects/${project.id}`}>
                 <img
                   src={project.image}
+                loading="lazy"
+                decoding="async"
                   alt={project.name}
                   className="w-full h-auto"
                 />

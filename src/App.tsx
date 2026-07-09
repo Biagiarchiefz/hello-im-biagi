@@ -1,14 +1,17 @@
 import { Route, Routes, useLocation } from "react-router";
 // import "./App.css";
-import HomePage from "@/features/home/HomePage";
+import { lazy, Suspense } from "react";
 import Navbar from "@/shared/components/Navbar";
 import Footer from "@/shared/components/Footer";
-import ContactPage from "@/features/contact/ContactPage";
-import ProjectPage from "@/features/projects/ProjectPage";
-import ProjectDetail from "@/features/projects/ProjectDetail";
-import ExperiencePage from "@/features/experience/ExperiencePage";
 import { AnimatePresence } from "motion/react";
-import LiveDemo from "@/features/live-demo/LiveDemo";
+import HomePage from "@/features/home/HomePage";
+
+// route-level code splitting: each page loads its chunk on first visit
+const ProjectPage = lazy(() => import("@/features/projects/ProjectPage"));
+const ProjectDetail = lazy(() => import("@/features/projects/ProjectDetail"));
+const ExperiencePage = lazy(() => import("@/features/experience/ExperiencePage"));
+const ContactPage = lazy(() => import("@/features/contact/ContactPage"));
+const LiveDemo = lazy(() => import("@/features/live-demo/LiveDemo"));
 
 function App() {
   const location = useLocation();
@@ -17,16 +20,18 @@ function App() {
       {location.pathname !== "/livedemonotfound" && <Navbar />}
 
       <div className="md:min-h-[70vh] ">
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectPage />} />
-            <Route path="/projects/:id" element={<ProjectDetail />} />
-            <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/livedemonotfound" element={<LiveDemo />} />
-          </Routes>
-        </AnimatePresence>
+        <Suspense fallback={null}>
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/projects" element={<ProjectPage />} />
+              <Route path="/projects/:id" element={<ProjectDetail />} />
+              <Route path="/experience" element={<ExperiencePage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/livedemonotfound" element={<LiveDemo />} />
+            </Routes>
+          </AnimatePresence>
+        </Suspense>
       </div>
       {location.pathname !== "/livedemonotfound" && <Footer />}
     </div>

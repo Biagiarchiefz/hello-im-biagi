@@ -22,6 +22,8 @@ const HomePage = () => {
           <motion.img
             src={myName}
             alt=""
+            fetchPriority="high"
+            decoding="async"
             className="w-[200px] md:w-[730px] absolute right-0 bottom-0 top-0"
             {...slideLeft}
           />
@@ -74,6 +76,8 @@ const HomePage = () => {
             <img
               src={aboutMe}
               alt=""
+              loading="lazy"
+              decoding="async"
               className="w-[278px] md:w-[773px] absolute top-0 left-0"
             />
           </div>
@@ -116,6 +120,8 @@ const HomePage = () => {
             <img
               src={myWorks}
               alt=""
+              loading="lazy"
+              decoding="async"
               className="w-[278px] md:w-[773px] absolute top-0 right-0"
             />
           </Reveal>

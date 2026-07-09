@@ -42,6 +42,8 @@ const ExperienceModalBody = ({ experience }: ExperienceModalBodyProps) => {
         <img
           src={experience.image}
           alt={experience.title}
+          loading="lazy"
+          decoding="async"
           className="mb-4 h-40 w-full rounded-lg object-cover"
         />
       )}

@@ -1,9 +1,10 @@
 import { Link, useParams } from "react-router";
-import { ArrowLeft, Github, TvMinimalPlay } from "lucide-react";
+import { Github, TvMinimalPlay } from "lucide-react";
 import { projects } from "@/features/projects/data/projects";
 import PageTransition from "@/shared/components/PageTransition";
 import Interested from "@/shared/components/Interested";
 import Reveal from "@/shared/components/Reveal";
+import Breadcrumbs from "@/shared/components/Breadcrumbs";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -26,14 +27,14 @@ const ProjectDetail = () => {
   return (
     <PageTransition>
       <div className="text-[#EDF0F7] px-[20px] md:px-[160px] mt-24 md:mt-32">
-        {/* Back link */}
-        <Link
-          to="/projects"
-          className="inline-flex items-center gap-2 text-[#7E62F3] font-semibold hover:gap-3 transition-all"
-        >
-          <ArrowLeft size={20} />
-          Back to Projects
-        </Link>
+        {/* Breadcrumbs */}
+        <Breadcrumbs
+          items={[
+            { label: "Home", to: "/" },
+            { label: "Projects", to: "/projects" },
+            { label: project.name },
+          ]}
+        />
 
         {/* Header */}
         <div className="mt-6">
@@ -48,6 +49,7 @@ const ProjectDetail = () => {
           <img
             src={project.image}
             alt={project.name}
+            decoding="async"
             className="w-full h-auto object-cover"
           />
         </Reveal>
