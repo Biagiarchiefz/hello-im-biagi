@@ -1,4 +1,4 @@
-import type { Experience, ExperienceType } from "@/interface/experience";
+import type { Experience, ExperienceType } from "@/features/experience/types/experience";
 
 export interface JourneyStats {
   total: number;

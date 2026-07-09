@@ -1,7 +1,7 @@
-import contactMe from "../assets/img/contactMe-b.webp";
+import contactMe from "@/assets/img/contactMe-b.webp";
 import { Mail, MapPinned, PhoneCall } from "lucide-react";
-import PageTransition from "@/components/PageTransition";
-import Reveal from "@/components/Reveal";
+import PageTransition from "@/shared/components/PageTransition";
+import Reveal from "@/shared/components/Reveal";
 
 const ContactPage = () => {
   return (

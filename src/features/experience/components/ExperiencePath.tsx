@@ -1,8 +1,8 @@
 import { useMemo, useState, type ReactNode } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Rocket } from "lucide-react";
-import type { Experience } from "@/interface/experience";
-import { buildSmoothPath, getJourneyLayout } from "@/lib/journeyPath";
+import type { Experience } from "@/features/experience/types/experience";
+import { buildSmoothPath, getJourneyLayout } from "@/features/experience/lib/journeyPath";
 import PathConnector from "./PathConnector";
 import ExperienceNode from "./ExperienceNode";
 import ExperienceModal from "./ExperienceModal";

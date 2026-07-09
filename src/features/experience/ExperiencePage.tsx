@@ -1,10 +1,10 @@
-import PageTransition from "@/components/PageTransition";
-import JourneyBackground from "@/components/JourneyBackground";
-import JourneyHeader from "@/components/JourneyHeader";
-import JourneyProgress from "@/components/JourneyProgress";
-import ExperiencePath from "@/components/ExperiencePath";
-import Interested from "@/components/Interested";
-import { experiences } from "@/data/experiences";
+import PageTransition from "@/shared/components/PageTransition";
+import JourneyBackground from "@/features/experience/components/JourneyBackground";
+import JourneyHeader from "@/features/experience/components/JourneyHeader";
+import JourneyProgress from "@/features/experience/components/JourneyProgress";
+import ExperiencePath from "@/features/experience/components/ExperiencePath";
+import Interested from "@/shared/components/Interested";
+import { experiences } from "@/features/experience/data/experiences";
 
 const ExperiencePage = () => {
   return (

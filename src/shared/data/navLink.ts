@@ -1,4 +1,4 @@
-import type { nav } from "@/interface/nav";
+import type { nav } from "@/shared/types/nav";
 
 export const navList: nav[] = [
     {

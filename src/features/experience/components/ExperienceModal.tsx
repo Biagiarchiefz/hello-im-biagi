@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "motion/react";
-import type { Experience } from "@/interface/experience";
-import { backdropMotion, modalMotion } from "@/animations/journey";
-import { useFocusTrap } from "@/lib/useFocusTrap";
+import type { Experience } from "@/features/experience/types/experience";
+import { backdropMotion, modalMotion } from "@/features/experience/animations/journey";
+import { useFocusTrap } from "@/features/experience/lib/useFocusTrap";
 import ExperienceModalHeader from "./ExperienceModalHeader";
 import ExperienceModalBody from "./ExperienceModalBody";
 import ExperienceModalFooter from "./ExperienceModalFooter";

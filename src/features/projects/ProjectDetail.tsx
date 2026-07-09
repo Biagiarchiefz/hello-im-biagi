@@ -1,9 +1,9 @@
 import { Link, useParams } from "react-router";
 import { ArrowLeft, Github, TvMinimalPlay } from "lucide-react";
-import { projects } from "@/data/projects";
-import PageTransition from "@/components/PageTransition";
-import Interested from "@/components/Interested";
-import Reveal from "@/components/Reveal";
+import { projects } from "@/features/projects/data/projects";
+import PageTransition from "@/shared/components/PageTransition";
+import Interested from "@/shared/components/Interested";
+import Reveal from "@/shared/components/Reveal";
 
 const ProjectDetail = () => {
   const { id } = useParams();

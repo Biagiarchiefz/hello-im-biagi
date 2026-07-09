@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Award, Lightbulb, Sparkles, Target } from "lucide-react";
-import type { Experience } from "@/interface/experience";
+import type { Experience } from "@/features/experience/types/experience";
 
 interface ExperienceModalBodyProps {
   experience: Experience;

@@ -1,10 +1,10 @@
 
-import thingDone from "../assets/img/thingsDone.webp";
-import ProjectSection from "@/components/ProjectSection";
-import { projects } from "@/data/projects";
-import Interested from "@/components/Interested";
-import PageTransition from "@/components/PageTransition";
-import Reveal from "@/components/Reveal";
+import thingDone from "@/assets/img/thingsDone.webp";
+import ProjectSection from "@/features/projects/components/ProjectSection";
+import { projects } from "@/features/projects/data/projects";
+import Interested from "@/shared/components/Interested";
+import PageTransition from "@/shared/components/PageTransition";
+import Reveal from "@/shared/components/Reveal";
 
 const ProjectPage = () => {
   return (

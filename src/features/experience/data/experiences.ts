@@ -1,4 +1,4 @@
-import type { Experience } from "@/interface/experience";
+import type { Experience } from "@/features/experience/types/experience";
 
 /**
  * The story of my journey as a software developer, told chronologically.

@@ -1,17 +1,17 @@
-import myName from "../assets/img/myName.webp";
-import aboutMe from "../assets/img/ABOUT ME-b.webp";
-import fhoto from "../assets/img/fhoto.webp";
-import myWorks from "../assets/img/MY WORKS-b.webp";
+import myName from "@/assets/img/myName.webp";
+import aboutMe from "@/assets/img/ABOUT ME-b.webp";
+import fhoto from "@/assets/img/fhoto.webp";
+import myWorks from "@/assets/img/MY WORKS-b.webp";
 import { Dribbble, Github, Instagram, Linkedin, MoveRight } from "lucide-react";
-import AsciiPortrait from "@/components/AsciiPortrait";
-import Interested from "@/components/Interested";
-import ProjectSection from "@/components/ProjectSection";
-import { projects } from "@/data/projects";
+import AsciiPortrait from "@/features/home/components/AsciiPortrait";
+import Interested from "@/shared/components/Interested";
+import ProjectSection from "@/features/projects/components/ProjectSection";
+import { projects } from "@/features/projects/data/projects";
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { fadeIn, slideLeft } from "@/animations/variants";
-import PageTransition from "@/components/PageTransition";
-import Reveal from "@/components/Reveal";
+import { fadeIn, slideLeft } from "@/shared/animations/variants";
+import PageTransition from "@/shared/components/PageTransition";
+import Reveal from "@/shared/components/Reveal";
 
 const HomePage = () => {
   return (

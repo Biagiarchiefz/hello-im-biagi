@@ -1,5 +1,5 @@
 import { X } from "lucide-react";
-import type { Experience } from "@/interface/experience";
+import type { Experience } from "@/features/experience/types/experience";
 
 interface ExperienceModalHeaderProps {
   experience: Experience;

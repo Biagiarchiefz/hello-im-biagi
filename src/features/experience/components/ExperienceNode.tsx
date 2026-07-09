@@ -7,8 +7,8 @@ import {
   Laptop,
   type LucideIcon,
 } from "lucide-react";
-import type { Experience, ExperienceType } from "@/interface/experience";
-import { nodeReveal } from "@/animations/journey";
+import type { Experience, ExperienceType } from "@/features/experience/types/experience";
+import { nodeReveal } from "@/features/experience/animations/journey";
 
 const ICONS: Record<ExperienceType, LucideIcon> = {
   education: GraduationCap,

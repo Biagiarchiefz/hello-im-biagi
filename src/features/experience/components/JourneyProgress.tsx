@@ -9,8 +9,8 @@ import {
   Trophy,
   type LucideIcon,
 } from "lucide-react";
-import type { Experience, ExperienceType } from "@/interface/experience";
-import { getJourneyStats } from "@/lib/journeyStats";
+import type { Experience, ExperienceType } from "@/features/experience/types/experience";
+import { getJourneyStats } from "@/features/experience/lib/journeyStats";
 
 interface JourneyProgressProps {
   experiences: Experience[];
