@@ -1,7 +1,7 @@
 import type { Project } from "@/interface/projects";
-import project1 from "../assets/img/project1.png";
-import project2 from "../assets/img/project2.png";
-import project3 from "../assets/img/project3.png";
+import project1 from "../assets/img/project1.webp";
+import project2 from "../assets/img/project2.webp";
+import project3 from "../assets/img/project3.webp";
 import project4 from "../assets/img/terraplant.webp";
 
 export const projects: Project[] = [

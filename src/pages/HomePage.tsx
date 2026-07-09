@@ -1,16 +1,17 @@
-import myName from "../assets/img/myName.png";
-import aboutMe from "../assets/img/ABOUT ME-b.png";
-import fhoto from "../assets/img/fhoto.png";
-// import project2 from "../assets/img/project 2.png";
-import myWorks from "../assets/img/MY WORKS-b.png";
+import myName from "../assets/img/myName.webp";
+import aboutMe from "../assets/img/ABOUT ME-b.webp";
+import fhoto from "../assets/img/fhoto.webp";
+import myWorks from "../assets/img/MY WORKS-b.webp";
 import { Dribbble, Github, Instagram, Linkedin, MoveRight } from "lucide-react";
+import AsciiPortrait from "@/components/AsciiPortrait";
 import Interested from "@/components/Interested";
 import ProjectSection from "@/components/ProjectSection";
 import { projects } from "@/data/projects";
 import { Link } from "react-router";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { fadeIn, slideLeft } from "@/animations/variants";
 import PageTransition from "@/components/PageTransition";
+import Reveal from "@/components/Reveal";
 
 const HomePage = () => {
   return (
@@ -65,7 +66,7 @@ const HomePage = () => {
         </div>
 
         {/* About Me Section  */}
-        <div className="px-[20px] md:px-[160px] mt-10 md:mt-20 ">
+        <Reveal className="px-[20px] md:px-[160px] mt-10 md:mt-20 ">
           <div className="title relative">
             <h1 className="text-[#7E62F3] font-bold text-[25px] md:text-5xl md:pt-12 pt-2 px-6 md:px-11">
               ABOUT ME
@@ -76,12 +77,11 @@ const HomePage = () => {
               className="w-[278px] md:w-[773px] absolute top-0 left-0"
             />
           </div>
-
+    
           <div className="flex flex-col items-center md:flex-row md:justify-between md:mt-15">
-            <img
+            <AsciiPortrait
               src={fhoto}
-              alt=""
-              className="w-[250px] md:w-[375px] object-contain"
+              className="w-[250px] md:w-[375px] shrink-0 hover:cursor-crosshair"
             />
             <div className="text-[#EDF0F7] px-[20px] w-[360px] md:w-[743px] flex flex-col gap-8 mt-5 text-[13px] md:text-lg">
               <p className="">
@@ -105,11 +105,11 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* Project Section */}
         <div className="px-[20px] md:px-[160px] mt-10 md:mt-20">
-          <div className="title relative">
+          <Reveal className="title relative">
             <h1 className="text-[#7E62F3] font-bold text-[25px] md:text-5xl md:pt-5 px-5 w-full relative flex justify-end">
               MY WORKS
             </h1>
@@ -118,15 +118,19 @@ const HomePage = () => {
               alt=""
               className="w-[278px] md:w-[773px] absolute top-0 right-0"
             />
-          </div>
+          </Reveal>
 
           {projects.slice(0, 3).map((project) => (
-            <ProjectSection key={project.id} project={project} />
+            <Reveal key={project.id}>
+              <ProjectSection project={project} />
+            </Reveal>
           ))}
         </div>
 
         {/* Interested working */}
-        <Interested />
+        <Reveal>
+          <Interested />
+        </Reveal>
       </div>
     </PageTransition>
   );

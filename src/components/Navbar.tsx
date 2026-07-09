@@ -41,7 +41,7 @@ const Navbar = () => {
       <nav
         className={`fixed w-full top-0 transition-all duration-300 ease-in-out z-50 ${
           isVisible
-            ? "shadow-lg top-5 text-base bg-[#EDF0F7]/10 backdrop-blur-lg rounded-xl"
+            ? "shadow-lg top-5 text-base bg-[#EDF0F7]/10 backdrop-blur-lg rounded-[5px]"
             : "bg-transparent"
         }`}
         style={{

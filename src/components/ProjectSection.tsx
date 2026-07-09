@@ -1,4 +1,5 @@
 import { Github, TvMinimalPlay } from "lucide-react";
+import { Link } from "react-router";
 import type { Project } from "@/interface/projects";
 
 
@@ -32,24 +33,28 @@ const ProjectSection = ({ project }: { project: Project }) => {
               </div>
             </div>
 
-            <img
-              src={project.image}
-              alt=""
-              className="md:max-w-[761px] absolute left-0 "
-            />
+            <Link to={`/projects/${project.id}`}>
+              <img
+                src={project.image}
+                alt={project.name}
+                className="md:max-w-[761px] absolute left-0 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+              />
+            </Link>
           </div>
 
           {/* Mobile View */}
           <div className="md:hidden text-[#EDF0F7] mt-10 group">
             <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-auto"
-              />
+              <Link to={`/projects/${project.id}`}>
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-auto"
+                />
+              </Link>
 
               {/* Glass overlay */}
-              <div className="absolute inset-0 bg-[#141414]/80 backdrop-blur-md group-active:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 ">
+              <div className="absolute inset-0 bg-[#141414]/80 backdrop-blur-md group-active:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 pointer-events-none">
                 <h3 className="font-semibold text-[#7E62F3]">
                   Project 0{project.id}
                 </h3>
@@ -60,7 +65,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
                 {/* <p className="text-xs">
                   {project.technologies.map((tech) => ` [${tech}]`)}
                 </p> */}
-                <div className="flex gap-3 mt-2">
+                <div className="flex gap-3 mt-2 pointer-events-auto">
                   <a href={project.github} target="_blank">
                     <Github size={20} />
                   </a>
@@ -98,24 +103,28 @@ const ProjectSection = ({ project }: { project: Project }) => {
               </div>
             </div>
 
-            <img
-              src={project.image}
-              alt=""
-              className=" md:max-w-[761px] absolute right-0"
-            />
+            <Link to={`/projects/${project.id}`}>
+              <img
+                src={project.image}
+                alt={project.name}
+                className=" md:max-w-[761px] absolute right-0 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
+              />
+            </Link>
           </div>
 
           {/* Mobile View */}
           <div className="md:hidden text-[#EDF0F7] mt-10 group">
             <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-auto"
-              />
+              <Link to={`/projects/${project.id}`}>
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-auto"
+                />
+              </Link>
 
               {/* Glass overlay */}
-              <div className="absolute inset-0 bg-[#141414]/80 backdrop-blur-md group-active:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-[#141414]/80 backdrop-blur-md group-active:opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6 pointer-events-none">
                 <h3 className="font-semibold text-[#7E62F3]">
                   Project 0{project.id}
                 </h3>
@@ -126,7 +135,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
                 {/* <p className="text-xs">
                   {project.technologies.map((tech) => ` [${tech}]`)}
                 </p> */}
-                <div className="flex gap-3 mt-2">
+                <div className="flex gap-3 mt-2 pointer-events-auto">
                   <a href={project.github} target="_blank">
                     <Github size={20} />
                   </a>
