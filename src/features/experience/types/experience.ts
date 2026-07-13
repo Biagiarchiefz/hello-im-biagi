@@ -12,7 +12,7 @@ export interface Experience {
   title: string;
   company: string;
   role: string;
-  /** Year (or "2022") the experience started */
+  /** Year (or "2022") the experience starteddsds */
   startDate: string;
   /** Year the experience ended, or "Present" for ongoing */
   endDate: string;
