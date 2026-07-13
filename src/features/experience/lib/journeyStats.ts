@@ -10,6 +10,8 @@ export interface JourneyStats {
 
 const TYPE_LABEL: Record<ExperienceType, string> = {
   education: "Education",
+  teaching: "Teaching",
+  community: "Community",
   internship: "Internship",
   work: "Work",
   competition: "Competition",

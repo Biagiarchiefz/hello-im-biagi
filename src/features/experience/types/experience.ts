@@ -1,5 +1,7 @@
 export type ExperienceType =
   | "education"
+  | "teaching"
+  | "community"
   | "internship"
   | "work"
   | "competition"

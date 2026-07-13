@@ -3,6 +3,8 @@ import {
   Briefcase,
   Code2,
   GraduationCap,
+  Globe,
+  Presentation,
   Trophy,
   Laptop,
   type LucideIcon,
@@ -12,6 +14,8 @@ import { nodeReveal } from "@/features/experience/animations/journey";
 
 const ICONS: Record<ExperienceType, LucideIcon> = {
   education: GraduationCap,
+  teaching: Presentation,
+  community: Globe,
   internship: Code2,
   work: Briefcase,
   competition: Trophy,
@@ -97,6 +101,11 @@ const ExperienceNode = ({
           {experience.company}
         </p>
         <p className="text-xs text-[#EDF0F7]/60">{experience.role}</p>
+        <span className="mt-1 inline-block rounded-full bg-white/5 px-2 py-0.5 text-[10px] font-medium text-[#EDF0F7]/45">
+          {experience.startDate === experience.endDate
+            ? experience.startDate
+            : `${experience.startDate} – ${experience.endDate}`}
+        </span>
       </div>
     </motion.div>
   );

@@ -6,6 +6,7 @@ import { buildSmoothPath, getJourneyLayout } from "@/features/experience/lib/jou
 import PathConnector from "./PathConnector";
 import ExperienceNode from "./ExperienceNode";
 import ExperienceModal from "./ExperienceModal";
+import NextChapterNode from "./NextChapterNode";
 
 interface ExperiencePathProps {
   experiences: Experience[];
@@ -32,7 +33,7 @@ const ExperiencePath = ({ experiences }: ExperiencePathProps) => {
     [layout.points],
   );
 
-  const height = 340 + experiences.length * 240;
+  const height = 340 + experiences.length * 240 + 220;
 
   const handleSelect = (experience: Experience, rect: DOMRect) =>
     setActive({ experience, rect });
@@ -64,6 +65,14 @@ const ExperiencePath = ({ experiences }: ExperiencePathProps) => {
             />
           </div>
         ))}
+
+        {/* Next Chapter teaser — continues the trail, not clickable */}
+        <div
+          className="absolute w-56 -translate-x-1/2 -translate-y-1/2 md:w-64"
+          style={{ left: `${layout.end.x}%`, top: `${layout.end.y}%` }}
+        >
+          <NextChapterNode />
+        </div>
       </div>
 
       <AnimatePresence>

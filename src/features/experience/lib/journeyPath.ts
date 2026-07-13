@@ -9,21 +9,24 @@ export interface JourneyLayout {
   start: Point;
   /** one point per milestone, in order */
   nodes: Point[];
-  /** start + milestones, used to draw the connecting path */
+  /** where the "Next Chapter" teaser sits, continuing the trail past the last milestone */
+  end: Point;
+  /** start + milestones + end, used to draw the connecting path */
   points: Point[];
 }
 
 /**
  * Lays milestones out along a vertical, zig-zagging path (Duolingo style).
- * The trail begins at a "Start" marker and ENDS on the last milestone — the
- * chapter the developer is currently living. All coordinates are normalized
- * to a 0-100 viewBox so the same numbers drive both the SVG connector and the
- * absolutely-positioned nodes, keeping them aligned at any screen size.
+ * The trail begins at a "Start" marker, runs through every milestone and
+ * continues on to an "end" point where the "Next Chapter" teaser sits — the
+ * story isn't over yet. All coordinates are normalized to a 0-100 viewBox so
+ * the same numbers drive both the SVG connector and the absolutely-positioned
+ * nodes, keeping them aligned at any screen size.
  */
 export function getJourneyLayout(count: number, amplitude = 22): JourneyLayout {
   const start: Point = { x: 50, y: 4 };
-  const topNode = 22;
-  const bottomNode = 92;
+  const topNode = 20;
+  const bottomNode = 78;
 
   const nodes: Point[] = Array.from({ length: count }, (_, i) => {
     const t = count <= 1 ? 0.5 : i / (count - 1);
@@ -33,7 +36,12 @@ export function getJourneyLayout(count: number, amplitude = 22): JourneyLayout {
     };
   });
 
-  return { start, nodes, points: [start, ...nodes] };
+  const end: Point = {
+    x: 50 + (count % 2 === 0 ? -amplitude : amplitude),
+    y: 95,
+  };
+
+  return { start, nodes, end, points: [start, ...nodes, end] };
 }
 
 /**
