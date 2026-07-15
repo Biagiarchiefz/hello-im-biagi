@@ -14,7 +14,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
               <h3 className="font-semibold text-[#7E62F3]">
                 Project 0{project.id}
               </h3>
-              <h1 className="text-3xl font-bold">{project.name}</h1>
+              <h2 className="text-3xl font-bold">{project.name}</h2>
               <div className="md:max-w-[500px] md:w-[500px] z-10 py-5 px-4 mt-3 rounded-[5px] bg-[#EDF0F7]/10 backdrop-blur-lg shadow-lg border-r-4 border-r-[#7E62F3] ">
                 <p className="line-clamp-5 leading-relaxed min-h-[100px]">
                   {project.description}
@@ -70,7 +70,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
                 <h3 className="font-semibold text-[#7E62F3]">
                   Project 0{project.id}
                 </h3>
-                <h1 className="text-2xl font-bold">{project.name}</h1>
+                <h2 className="text-2xl font-bold">{project.name}</h2>
                 <p className="text-sm line-clamp-2 leading-relaxed">
                   {project.description}
                 </p>
@@ -96,7 +96,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
               <h3 className="font-semibold text-[#7E62F3]">
                 Project 0{project.id}
               </h3>
-              <h1 className="text-3xl font-bold">{project.name}</h1>
+              <h2 className="text-3xl font-bold">{project.name}</h2>
               <div className="md:max-w-[500px] md:w-[500px] z-10 py-5 px-4 mt-3 rounded-[5px] bg-[#EDF0F7]/10 backdrop-blur-lg shadow-lg border-l-4 border-l-[#7E62F3] ">
                 <p className="line-clamp-5 leading-relaxed min-h-[100px]">
                   {project.description}
@@ -152,7 +152,7 @@ const ProjectSection = ({ project }: { project: Project }) => {
                 <h3 className="font-semibold text-[#7E62F3]">
                   Project 0{project.id}
                 </h3>
-                <h1 className="text-2xl font-bold">{project.name}</h1>
+                <h2 className="text-2xl font-bold">{project.name}</h2>
                 <p className="text-sm line-clamp-2 leading-relaxed">
                   {project.description}
                 </p>

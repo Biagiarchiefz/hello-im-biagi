@@ -6,10 +6,16 @@ import { projects } from "@/features/projects/data/projects";
 import Interested from "@/shared/components/Interested";
 import PageTransition from "@/shared/components/PageTransition";
 import Reveal from "@/shared/components/Reveal";
+import Seo from "@/shared/components/Seo";
 
 const ProjectPage = () => {
   return (
     <PageTransition>
+      <Seo
+        title="Projects"
+        path="/projects"
+        description="Kumpulan proyek web Biagi Archie Fais — dari e-commerce MERN, aplikasi Machine Learning, hingga platform pembelajaran. Dibangun dengan React, Tailwind, Node.js, dan lainnya."
+      />
       <div className="text-white px-[20px] md:px-[160px] mt-10 md:mt-20">
         {/* Title Section */}
         <Reveal className="title relative mb-10 md:mb-0">

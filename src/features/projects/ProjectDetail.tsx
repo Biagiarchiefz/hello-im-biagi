@@ -5,6 +5,7 @@ import PageTransition from "@/shared/components/PageTransition";
 import Interested from "@/shared/components/Interested";
 import Reveal from "@/shared/components/Reveal";
 import Breadcrumbs from "@/shared/components/Breadcrumbs";
+import Seo from "@/shared/components/Seo";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -13,6 +14,7 @@ const ProjectDetail = () => {
   if (!project) {
     return (
       <div className="bg-[#141414] min-h-[70vh] flex flex-col justify-center items-center text-[#EDF0F7] px-6 text-center">
+        <Seo title="Project tidak ditemukan" path="/projects" noindex />
         <h1 className="text-2xl md:text-3xl font-bold">Project tidak ditemukan</h1>
         <Link
           to="/projects"
@@ -26,6 +28,12 @@ const ProjectDetail = () => {
 
   return (
     <PageTransition>
+      <Seo
+        title={project.name}
+        path={`/projects/${project.id}`}
+        description={project.description.slice(0, 155)}
+        image={project.image}
+      />
       <div className="text-[#EDF0F7] px-[20px] md:px-[160px] mt-24 md:mt-32">
         {/* Breadcrumbs */}
         <Breadcrumbs

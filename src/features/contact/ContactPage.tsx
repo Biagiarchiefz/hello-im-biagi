@@ -3,11 +3,17 @@ import contactMeSrcSet from "@/assets/img/contactMe-b.webp?w=400;773;900&format=
 import { Mail, MapPinned, PhoneCall } from "lucide-react";
 import PageTransition from "@/shared/components/PageTransition";
 import Reveal from "@/shared/components/Reveal";
+import Seo from "@/shared/components/Seo";
 
 const ContactPage = () => {
   return (
 
     <PageTransition>
+      <Seo
+        title="Contact"
+        path="/contact"
+        description="Hubungi Biagi Archie Fais untuk kolaborasi atau peluang kerja. Email biagiiarchie@gmail.com, telepon, atau lokasi di Bandung, Indonesia."
+      />
       <div className="text-white px-[20px] md:px-[160px] mt-10 md:mt-20">
         {/* Title Section */}
         <Reveal className="title relative mb-10 md:mb-0">
@@ -72,9 +78,9 @@ const ContactPage = () => {
 
       {/* CTA Section */}
       <Reveal className="text-[#7E62F3] mt-20 md:mt-40 mb-[25px] px-[20px] md:px-[50px]">
-        <h1 className="text-3xl md:text-5xl font-semibold text-center md:text-left">
+        <h2 className="text-3xl md:text-5xl font-semibold text-center md:text-left">
           Let's work together!
-        </h1>
+        </h2>
       </Reveal>
     </PageTransition>
   );

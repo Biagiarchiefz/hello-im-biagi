@@ -5,6 +5,7 @@ import Navbar from "@/shared/components/Navbar";
 import Footer from "@/shared/components/Footer";
 import { AnimatePresence, MotionConfig } from "motion/react";
 import HomePage from "@/features/home/HomePage";
+import PageLoader from "@/shared/components/PageLoader";
 import { useIsMobile } from "@/shared/lib/useIsMobile";
 
 // route-level code splitting: each page loads its chunk on first visit
@@ -25,8 +26,8 @@ function App() {
       <div className=" bg-[#141414]">
         {location.pathname !== "/livedemonotfound" && <Navbar />}
 
-        <div className="md:min-h-[70vh] ">
-          <Suspense fallback={null}>
+        <main className="min-h-[70vh]">
+          <Suspense fallback={<PageLoader />}>
             <AnimatePresence mode="wait">
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<HomePage />} />
@@ -38,7 +39,7 @@ function App() {
               </Routes>
             </AnimatePresence>
           </Suspense>
-        </div>
+        </main>
         {location.pathname !== "/livedemonotfound" && <Footer />}
       </div>
     </MotionConfig>

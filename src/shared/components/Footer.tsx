@@ -16,7 +16,7 @@ const Footer = () => {
     //     <p>Biagi Archie Fais © 2025</p>
     //   </div>
     // </div>
-    <div className="bg-[#7E62F3] text-[#EDF0F7] p-[20px] md:p-[50px]">
+    <footer className="bg-[#7E62F3] text-[#EDF0F7] p-[20px] md:p-[50px]">
       <div className="flex flex-col gap-6 md:gap-8">
         {/* Social Links */}
         <div className="flex flex-wrap gap-3 md:gap-5 text-base md:text-xl">
@@ -68,7 +68,7 @@ const Footer = () => {
         {/* Copyright */}
         <p className="text-sm md:text-base">Biagi Archie Fais © 2025</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

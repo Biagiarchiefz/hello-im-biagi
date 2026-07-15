@@ -18,6 +18,7 @@ import { motion } from "motion/react";
 import { fadeIn } from "@/shared/animations/variants";
 import PageTransition from "@/shared/components/PageTransition";
 import Reveal from "@/shared/components/Reveal";
+import Seo from "@/shared/components/Seo";
 
 // below-the-fold interactive canvas widget — split out of the initial bundle
 const AsciiPortrait = lazy(
@@ -27,6 +28,11 @@ const AsciiPortrait = lazy(
 const HomePage = () => {
   return (
     <PageTransition>
+      <Seo
+        title="Home"
+        path="/"
+        description="Portfolio Biagi Archie Fais — Front-End Developer asal Indonesia yang berfokus pada React, TypeScript, dan Tailwind CSS. Lihat proyek & pengalaman terbaru."
+      />
       <div className="bg-[#141414]">
         {/* section 1 profile */}
         <div className="md:h-[100vh] flex items-center relative">
@@ -90,9 +96,9 @@ const HomePage = () => {
         {/* About Me Section  */}
         <Reveal className="px-[20px] md:px-[160px] mt-10 md:mt-20 ">
           <div className="title relative">
-            <h1 className="text-[#7E62F3] font-bold text-[25px] md:text-5xl md:pt-12 pt-2 px-6 md:px-11">
+            <h2 className="text-[#7E62F3] font-bold text-[25px] md:text-5xl md:pt-12 pt-2 px-6 md:px-11">
               ABOUT ME
-            </h1>
+            </h2>
             <img
               src={aboutMe}
               srcSet={aboutMeSrcSet}
@@ -144,9 +150,9 @@ const HomePage = () => {
         {/* Project Section */}
         <div className="px-[20px] md:px-[160px] mt-10 md:mt-20">
           <Reveal className="title relative">
-            <h1 className="text-[#7E62F3] font-bold text-[25px] md:text-5xl md:pt-5 px-5 w-full relative flex justify-end">
+            <h2 className="text-[#7E62F3] font-bold text-[25px] md:text-5xl md:pt-5 px-5 w-full relative flex justify-end">
               MY WORKS
-            </h1>
+            </h2>
             <img
               src={myWorks}
               srcSet={myWorksSrcSet}

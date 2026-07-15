@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Halaman utilitas tanpa konten yang perlu diindeks
+Disallow: /livedemonotfound
+
+Sitemap: https://biagi.kodingin.id/sitemap.xml
