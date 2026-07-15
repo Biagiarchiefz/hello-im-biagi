@@ -1,17 +1,28 @@
-import myName from "@/assets/img/myName.webp";
-import aboutMe from "@/assets/img/ABOUT ME-b.webp";
+// resized at build time by vite-imagetools (sources are 2–3k px wide, shown ≤730px).
+// Each image ships a single-width `src` fallback plus a multi-width `srcSet`
+// so mobile downloads a small file and desktop/retina a larger one.
+import myName from "@/assets/img/myName.webp?w=1000&format=webp&quality=80";
+import myNameSrcSet from "@/assets/img/myName.webp?w=400;730;1000&format=webp&quality=80&as=srcset";
+import aboutMe from "@/assets/img/ABOUT ME-b.webp?w=900&format=webp&quality=80";
+import aboutMeSrcSet from "@/assets/img/ABOUT ME-b.webp?w=400;773;900&format=webp&quality=80&as=srcset";
 import fhoto from "@/assets/img/fhoto.webp";
-import myWorks from "@/assets/img/MY WORKS-b.webp";
+import myWorks from "@/assets/img/MY WORKS-b.webp?w=900&format=webp&quality=80";
+import myWorksSrcSet from "@/assets/img/MY WORKS-b.webp?w=400;773;900&format=webp&quality=80&as=srcset";
 import { Dribbble, Github, Instagram, Linkedin, MoveRight } from "lucide-react";
-import AsciiPortrait from "@/features/home/components/AsciiPortrait";
+import { lazy, Suspense } from "react";
 import Interested from "@/shared/components/Interested";
 import ProjectSection from "@/features/projects/components/ProjectSection";
 import { projects } from "@/features/projects/data/projects";
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { fadeIn, slideLeft } from "@/shared/animations/variants";
+import { fadeIn } from "@/shared/animations/variants";
 import PageTransition from "@/shared/components/PageTransition";
 import Reveal from "@/shared/components/Reveal";
+
+// below-the-fold interactive canvas widget — split out of the initial bundle
+const AsciiPortrait = lazy(
+  () => import("@/features/home/components/AsciiPortrait")
+);
 
 const HomePage = () => {
   return (
@@ -19,13 +30,22 @@ const HomePage = () => {
       <div className="bg-[#141414]">
         {/* section 1 profile */}
         <div className="md:h-[100vh] flex items-center relative">
+          {/* LCP candidate: paint immediately. We slide via transform only and
+              keep opacity at 1 so the fade/delay never postpones the LCP paint. */}
           <motion.img
             src={myName}
+            srcSet={myNameSrcSet}
+            sizes="(max-width: 767px) 200px, 730px"
             alt=""
+            width={2203}
+            height={2239}
+            loading="eager"
             fetchPriority="high"
             decoding="async"
             className="w-[200px] md:w-[730px] absolute right-0 bottom-0 top-0"
-            {...slideLeft}
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           />
           <div className="text-[#EDF0F7] mt-25 md:mt-0 w-full px-[20px] md:px-[160px] flex justify-between">
             <div className="flex flex-col gap-2 md:gap-4">
@@ -75,7 +95,11 @@ const HomePage = () => {
             </h1>
             <img
               src={aboutMe}
+              srcSet={aboutMeSrcSet}
+              sizes="(max-width: 767px) 278px, 773px"
               alt=""
+              width={3094}
+              height={472}
               loading="lazy"
               decoding="async"
               className="w-[278px] md:w-[773px] absolute top-0 left-0"
@@ -83,10 +107,16 @@ const HomePage = () => {
           </div>
     
           <div className="flex flex-col items-center md:flex-row md:justify-between md:mt-15">
-            <AsciiPortrait
-              src={fhoto}
-              className="w-[250px] md:w-[375px] shrink-0 hover:cursor-crosshair"
-            />
+            <Suspense
+              fallback={
+                <div className="w-[250px] md:w-[375px] shrink-0 aspect-[375/408]" />
+              }
+            >
+              <AsciiPortrait
+                src={fhoto}
+                className="w-[250px] md:w-[375px] shrink-0 hover:cursor-crosshair"
+              />
+            </Suspense>
             <div className="text-[#EDF0F7] px-[20px] w-[360px] md:w-[743px] flex flex-col gap-8 mt-5 text-[13px] md:text-lg">
               <p className="">
                 I’m a Front-End Developer and an undergraduate student at
@@ -119,7 +149,11 @@ const HomePage = () => {
             </h1>
             <img
               src={myWorks}
+              srcSet={myWorksSrcSet}
+              sizes="(max-width: 767px) 278px, 773px"
               alt=""
+              width={3308}
+              height={440}
               loading="lazy"
               decoding="async"
               className="w-[278px] md:w-[773px] absolute top-0 right-0"

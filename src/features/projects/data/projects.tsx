@@ -1,9 +1,16 @@
 import type { Project } from "@/features/projects/types/projects";
-import project1 from "@/assets/img/project1.webp";
-import project2 from "@/assets/img/project2.webp";
-import project3 from "@/assets/img/machineLearningProject.webp";
-import project4 from "@/assets/img/terraplant.webp";
-import project5 from "@/assets/img/kiddoProject.webp";
+// resized at build time by vite-imagetools (sources are ~3044px wide, shown ≤761px).
+// `*` = single-width `src` fallback; `*SrcSet` = multi-width responsive srcset.
+import project1 from "@/assets/img/project1.webp?w=900&format=webp&quality=80";
+import project1SrcSet from "@/assets/img/project1.webp?w=500;761;900&format=webp&quality=80&as=srcset";
+import project2 from "@/assets/img/project2.webp?w=900&format=webp&quality=80";
+import project2SrcSet from "@/assets/img/project2.webp?w=500;761;900&format=webp&quality=80&as=srcset";
+import project3 from "@/assets/img/machineLearningProject.webp?w=900&format=webp&quality=80";
+import project3SrcSet from "@/assets/img/machineLearningProject.webp?w=500;761;900&format=webp&quality=80&as=srcset";
+import project4 from "@/assets/img/terraplant.webp?w=900&format=webp&quality=80";
+import project4SrcSet from "@/assets/img/terraplant.webp?w=500;761;900&format=webp&quality=80&as=srcset";
+import project5 from "@/assets/img/kiddoProject.webp?w=900&format=webp&quality=80";
+import project5SrcSet from "@/assets/img/kiddoProject.webp?w=500;761;900&format=webp&quality=80&as=srcset";
 
 
 export const projects: Project[] = [
@@ -16,6 +23,9 @@ export const projects: Project[] = [
     github: "https://github.com/Biagiarchiefz/pw2024_tubes_233040006",
     liveDemo: "/livedemonotfound",
     image: project1,
+    imageSrcSet: project1SrcSet,
+    imageWidth: 3044,
+    imageHeight: 1440,
   },
   {
     id: 2,
@@ -26,6 +36,9 @@ export const projects: Project[] = [
     github: "https://github.com/Biagiarchiefz/portfolio-v1",
     liveDemo: "https://biagiarchiefz.github.io/portfolio-v1/",
     image: project2,
+    imageSrcSet: project2SrcSet,
+    imageWidth: 3044,
+    imageHeight: 1468,
   },
   {
     id: 3,
@@ -43,6 +56,9 @@ export const projects: Project[] = [
     github: "https://github.com/Biagiarchiefz/terraplant-be",
     liveDemo: "https://terraplant-fe.vercel.app/",
     image: project4,
+    imageSrcSet: project4SrcSet,
+    imageWidth: 3044,
+    imageHeight: 1464,
   },
   {
     id: 4,
@@ -53,6 +69,9 @@ export const projects: Project[] = [
     github: "https://github.com/Biagiarchiefz/flood-prediction-app",
     liveDemo: "https://floodpredict-app.vercel.app/",
     image: project3,
+    imageSrcSet: project3SrcSet,
+    imageWidth: 3044,
+    imageHeight: 1456,
   },
   {
     id: 5,
@@ -63,6 +82,9 @@ export const projects: Project[] = [
     github: "https://github.com/Biagiarchiefz/kiddo",
     liveDemo: "https://kiddo-sepia.vercel.app/",
     image: project5,
+    imageSrcSet: project5SrcSet,
+    imageWidth: 3044,
+    imageHeight: 1448,
   },
 ];
 

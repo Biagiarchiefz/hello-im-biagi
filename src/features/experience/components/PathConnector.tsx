@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useIsMobile } from "@/shared/lib/useIsMobile";
 
 interface PathConnectorProps {
   /** SVG cubic-bezier path string in a 0-100 viewBox */
@@ -13,6 +14,7 @@ interface PathConnectorProps {
  * crisp and even.
  */
 const PathConnector = ({ d }: PathConnectorProps) => {
+  const isMobile = useIsMobile();
   return (
     <svg
       aria-hidden
@@ -32,19 +34,32 @@ const PathConnector = ({ d }: PathConnectorProps) => {
         strokeDasharray="0.1 6"
       />
 
-      {/* animated drawn line */}
-      <motion.path
-        d={d}
-        stroke="#7E62F3"
-        strokeWidth={3}
-        strokeLinecap="round"
-        vectorEffect="non-scaling-stroke"
-        initial={{ pathLength: 0 }}
-        whileInView={{ pathLength: 1 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
-        style={{ filter: "drop-shadow(0 0 6px rgba(126,98,243,0.5))" }}
-      />
+      {/* drawn line — animated draw-in on desktop; on mobile render it fully
+          drawn with no per-frame pathLength tween or costly drop-shadow filter.
+          (pathLength is an SVG value, not a transform, so MotionConfig's
+          reducedMotion does not disable it — hence the explicit branch.) */}
+      {isMobile ? (
+        <path
+          d={d}
+          stroke="#7E62F3"
+          strokeWidth={3}
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+        />
+      ) : (
+        <motion.path
+          d={d}
+          stroke="#7E62F3"
+          strokeWidth={3}
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+          style={{ filter: "drop-shadow(0 0 6px rgba(126,98,243,0.5))" }}
+        />
+      )}
     </svg>
   );
 };

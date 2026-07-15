@@ -1,5 +1,6 @@
 
-import thingDone from "@/assets/img/thingsDone.webp";
+import thingDone from "@/assets/img/thingsDone.webp?w=900&format=webp&quality=80";
+import thingDoneSrcSet from "@/assets/img/thingsDone.webp?w=400;773;900&format=webp&quality=80&as=srcset";
 import ProjectSection from "@/features/projects/components/ProjectSection";
 import { projects } from "@/features/projects/data/projects";
 import Interested from "@/shared/components/Interested";
@@ -17,7 +18,13 @@ const ProjectPage = () => {
           </h1>
           <img
             src={thingDone}
+            srcSet={thingDoneSrcSet}
+            sizes="(max-width: 767px) 300px, 773px"
             alt=""
+            width={3724}
+            height={1240}
+            loading="lazy"
+            decoding="async"
             className="w-[300px] md:w-[773px] absolute top-5 md:top-0 left-0 opacity-50 md:opacity-100"
           />
         </Reveal>

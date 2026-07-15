@@ -48,7 +48,13 @@ const ProjectDetail = () => {
         <Reveal className="mt-8 overflow-hidden rounded-[8px] border border-[#EDF0F7]/10">
           <img
             src={project.image}
+            srcSet={project.imageSrcSet}
+            sizes="(max-width: 767px) 100vw, 900px"
+            width={project.imageWidth}
+            height={project.imageHeight}
             alt={project.name}
+            loading="eager"
+            fetchPriority="high"
             decoding="async"
             className="w-full h-auto object-cover"
           />

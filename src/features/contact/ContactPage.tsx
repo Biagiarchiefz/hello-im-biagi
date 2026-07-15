@@ -1,4 +1,5 @@
-import contactMe from "@/assets/img/contactMe-b.webp";
+import contactMe from "@/assets/img/contactMe-b.webp?w=900&format=webp&quality=80";
+import contactMeSrcSet from "@/assets/img/contactMe-b.webp?w=400;773;900&format=webp&quality=80&as=srcset";
 import { Mail, MapPinned, PhoneCall } from "lucide-react";
 import PageTransition from "@/shared/components/PageTransition";
 import Reveal from "@/shared/components/Reveal";
@@ -15,7 +16,13 @@ const ContactPage = () => {
           </h1>
           <img
             src={contactMe}
+            srcSet={contactMeSrcSet}
+            sizes="(max-width: 767px) 300px, 773px"
             alt=""
+            width={3951}
+            height={440}
+            loading="lazy"
+            decoding="async"
             className="w-[300px] md:w-[773px] absolute top-10 left-1/2 -translate-x-1/2 opacity-50 md:opacity-100"
           />
         </Reveal>

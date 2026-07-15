@@ -36,6 +36,10 @@ const ProjectSection = ({ project }: { project: Project }) => {
             <Link to={`/projects/${project.id}`}>
               <img
                 src={project.image}
+                srcSet={project.imageSrcSet}
+                sizes="761px"
+                width={project.imageWidth}
+                height={project.imageHeight}
                 loading="lazy"
                 decoding="async"
                 alt={project.name}
@@ -50,6 +54,10 @@ const ProjectSection = ({ project }: { project: Project }) => {
               <Link to={`/projects/${project.id}`}>
                 <img
                   src={project.image}
+                srcSet={project.imageSrcSet}
+                sizes="100vw"
+                width={project.imageWidth}
+                height={project.imageHeight}
                 loading="lazy"
                 decoding="async"
                   alt={project.name}
@@ -110,6 +118,10 @@ const ProjectSection = ({ project }: { project: Project }) => {
             <Link to={`/projects/${project.id}`}>
               <img
                 src={project.image}
+                srcSet={project.imageSrcSet}
+                sizes="761px"
+                width={project.imageWidth}
+                height={project.imageHeight}
                 loading="lazy"
                 decoding="async"
                 alt={project.name}
@@ -124,6 +136,10 @@ const ProjectSection = ({ project }: { project: Project }) => {
               <Link to={`/projects/${project.id}`}>
                 <img
                   src={project.image}
+                srcSet={project.imageSrcSet}
+                sizes="100vw"
+                width={project.imageWidth}
+                height={project.imageHeight}
                 loading="lazy"
                 decoding="async"
                   alt={project.name}
