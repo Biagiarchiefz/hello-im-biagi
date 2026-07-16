@@ -5,17 +5,18 @@ interface PageTransitionProps {
   children: ReactNode;
 }
 
+/**
+ * Pembungkus halaman. `initial={false}` membuat motion me-render LANGSUNG di
+ * state akhir (terlihat) tanpa animasi mount.
+ *
+ * Ini WAJIB untuk SSG: kalau animasi dari `opacity:0`, HTML hasil pre-render
+ * ikut ter-render `opacity:0` → halaman tampak hitam sampai JS memuat &
+ * menganimasikannya. Dengan `initial={false}`, konten pre-render langsung
+ * tampil dan hydration cocok (tak ada kedip / mismatch). Animasi scroll
+ * per-seksi ditangani oleh <Reveal>.
+ */
 const PageTransition = ({ children }: PageTransitionProps) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-    >
-      {children}
-    </motion.div>
-  );
+  return <motion.div initial={false}>{children}</motion.div>;
 };
 
 export default PageTransition;

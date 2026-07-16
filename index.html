@@ -6,53 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#141414" />
 
-    <!-- Primary SEO. NOTE: URL absolut di bawah harus sama dengan `url` di src/shared/config/site.ts -->
-    <title>Biagi Archie Fais — Front-End Developer</title>
-    <meta
-      name="description"
-      content="Portfolio Biagi Archie Fais — Front-End Developer asal Indonesia yang berfokus pada React, TypeScript, dan Tailwind CSS. Lihat proyek, pengalaman, dan hubungi saya untuk kolaborasi."
-    />
-    <meta
-      name="keywords"
-      content="Biagi Archie Fais, Front-End Developer, React Developer, Web Developer Indonesia, TypeScript, Tailwind CSS, Portfolio"
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Biagi Archie Fais" />
-    <link rel="canonical" href="https://biagi.kodingin.id/" />
-
-    <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Biagi Archie Fais" />
-    <meta property="og:locale" content="id_ID" />
-    <meta
-      property="og:title"
-      content="Biagi Archie Fais — Front-End Developer"
-    />
-    <meta
-      property="og:description"
-      content="Portfolio Biagi Archie Fais — Front-End Developer asal Indonesia (React, TypeScript, Tailwind CSS)."
-    />
-    <meta property="og:url" content="https://biagi.kodingin.id/" />
-    <meta
-      property="og:image"
-      content="https://biagi.kodingin.id/og-image.jpg"
-    />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Biagi Archie Fais — Front-End Developer"
-    />
-    <meta
-      name="twitter:description"
-      content="Portfolio Biagi Archie Fais — Front-End Developer asal Indonesia (React, TypeScript, Tailwind CSS)."
-    />
-    <meta
-      name="twitter:image"
-      content="https://biagi.kodingin.id/og-image.jpg"
-    />
-
+    <!--
+      Meta SEO (title, description, canonical, Open Graph, Twitter) TIDAK lagi
+      statis di sini. Semuanya disuntikkan PER HALAMAN oleh komponen <Seo>
+      (react-helmet-async) dan ditulis ke <head> tiap file saat pre-render (SSG).
+      Menaruhnya di sini lagi akan membuat tag GANDA. Yang tersisa hanya tag yang
+      benar-benar sama untuk semua halaman (verifikasi Search Console):
+    -->
     <meta
       name="google-site-verification"
       content="mA-l3zRKZT6Fv4T-_ebIflJpFAjdFED0Umzhtw8ichU"

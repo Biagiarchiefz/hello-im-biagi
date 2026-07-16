@@ -10,6 +10,7 @@ import myWorks from "@/assets/img/MY WORKS-b.webp?w=900&format=webp&quality=80";
 import myWorksSrcSet from "@/assets/img/MY WORKS-b.webp?w=400;773;900&format=webp&quality=80&as=srcset";
 import { Dribbble, Github, Instagram, Linkedin, MoveRight } from "lucide-react";
 import { lazy, Suspense } from "react";
+import { ClientOnly } from "vite-react-ssg";
 import Interested from "@/shared/components/Interested";
 import ProjectSection from "@/features/projects/components/ProjectSection";
 import { projects } from "@/features/projects/data/projects";
@@ -113,16 +114,29 @@ const HomePage = () => {
           </div>
     
           <div className="flex flex-col items-center md:flex-row md:justify-between md:mt-15">
-            <Suspense
+            {/* Canvas widget khusus browser. <ClientOnly> membuatnya TIDAK
+                dirender saat pre-render (SSG) — kalau dipaksa, komponen lazy ini
+                "suspend" dan menyeret seluruh halaman ke <div hidden> setelah
+                footer. Saat SSG hanya placeholder yang tampil; di browser baru
+                AsciiPortrait dimuat (lewat Suspense di dalam). */}
+            <ClientOnly
               fallback={
                 <div className="w-[250px] md:w-[375px] shrink-0 aspect-[375/408]" />
               }
             >
-              <AsciiPortrait
-                src={fhoto}
-                className="w-[250px] md:w-[375px] shrink-0 hover:cursor-crosshair"
-              />
-            </Suspense>
+              {() => (
+                <Suspense
+                  fallback={
+                    <div className="w-[250px] md:w-[375px] shrink-0 aspect-[375/408]" />
+                  }
+                >
+                  <AsciiPortrait
+                    src={fhoto}
+                    className="w-[250px] md:w-[375px] shrink-0 hover:cursor-crosshair"
+                  />
+                </Suspense>
+              )}
+            </ClientOnly>
             <div className="text-[#EDF0F7] px-[20px] w-[360px] md:w-[743px] flex flex-col gap-8 mt-5 text-[13px] md:text-lg">
               <p className="">
                 I’m a Front-End Developer and an undergraduate student at

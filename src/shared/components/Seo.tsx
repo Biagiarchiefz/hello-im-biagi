@@ -1,3 +1,4 @@
+import { Head } from "vite-react-ssg";
 import { siteConfig } from "@/shared/config/site";
 
 interface SeoProps {
@@ -15,12 +16,12 @@ interface SeoProps {
 }
 
 /**
- * Menyuntikkan meta tag per halaman. React 19 otomatis meng-hoist elemen
- * <title>/<meta>/<link> ini ke <head>, jadi tidak perlu react-helmet.
- *
- * Catatan: tag ini dirender oleh JS, jadi terbaca oleh Googlebot (yang
- * merender JS) — bukan oleh scraper sosmed. Untuk preview share, default OG
- * tetap disediakan secara statis di index.html.
+ * Menyuntikkan meta tag per halaman lewat <Head> (react-helmet-async) dari
+ * vite-react-ssg. Karena situs ini di-pre-render (SSG), tag di dalam <Head>
+ * ikut ditulis ke <head> file HTML statis saat build — jadi Googlebot MAUPUN
+ * scraper sosmed (WhatsApp/FB/LinkedIn) yang tidak menjalankan JS tetap membaca
+ * judul & Open Graph yang benar per halaman. Di browser, helmet mengambil alih
+ * dan memperbarui <head> saat navigasi antar-halaman.
  */
 const Seo = ({
   title,
@@ -38,16 +39,12 @@ const Seo = ({
     : `${siteConfig.url}${image ?? siteConfig.ogImage}`;
 
   return (
-    <>
+    <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={url} />
-      {noindex ? (
-        <meta name="robots" content="noindex, nofollow" />
-      ) : (
-        <meta name="robots" content="index, follow" />
-      )}
+      <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
 
       {/* Open Graph (Facebook, WhatsApp, LinkedIn) */}
       <meta property="og:type" content="website" />
@@ -63,7 +60,7 @@ const Seo = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-    </>
+    </Head>
   );
 };
 
