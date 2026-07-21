@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { MapPin } from "lucide-react";
 
 /** Intro block that frames the page as an interactive journey, not a CV list. */
 const JourneyHeader = () => {
@@ -9,9 +8,11 @@ const JourneyHeader = () => {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="inline-flex items-center gap-2 rounded-full border border-[#7E62F3]/40 bg-[#7E62F3]/10 px-4 py-1.5 text-sm font-medium text-[#7E62F3]"
+        className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#7E62F3]"
       >
-        <MapPin size={15} /> My Journey
+        <span aria-hidden className="h-px w-8 bg-[#7E62F3]/40" />
+        My Journey
+        <span aria-hidden className="h-px w-8 bg-[#7E62F3]/40" />
       </motion.span>
 
       <motion.h1

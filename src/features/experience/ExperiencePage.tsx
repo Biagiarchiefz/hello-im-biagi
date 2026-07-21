@@ -12,7 +12,7 @@ const ExperiencePage = () => {
       <Seo
         title="Experience"
         path="/experience"
-        description="Perjalanan dan pengalaman Biagi Archie Fais sebagai Front-End Developer — proyek, teknologi yang dikuasai, keterampilan, dan pencapaian sepanjang karier."
+        description="Perjalanan dan pengalaman Biagi Archie Fais sebagai Software Engineer — proyek, teknologi yang dikuasai, keterampilan, dan pencapaian sepanjang karier."
       />
       <section className="relative overflow-hidden px-[20px] pt-28 pb-50 md:px-[160px] md:pt-36">
         <JourneyBackground />

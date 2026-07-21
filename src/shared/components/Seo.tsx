@@ -33,10 +33,33 @@ const Seo = ({
 }: SeoProps) => {
   const url = `${siteConfig.url}${path}`;
   const fullTitle =
-    path === "/" ? `${siteConfig.name} — Front-End Developer` : `${title} | ${siteConfig.name}`;
+    path === "/" ? `${siteConfig.name} — Software Engineer` : `${title} | ${siteConfig.name}`;
   const ogImage = (image ?? siteConfig.ogImage).startsWith("http")
     ? (image ?? siteConfig.ogImage)
     : `${siteConfig.url}${image ?? siteConfig.ogImage}`;
+
+  /**
+   * Structured data (JSON-LD) schema.org `Person` — hanya di homepage agar
+   * tidak terduplikasi di tiap halaman. Membantu Google menampilkan info
+   * profil (nama, jabatan, akun sosial) di hasil pencarian.
+   */
+  const personJsonLd =
+    path === "/"
+      ? JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: siteConfig.name,
+          url: siteConfig.url,
+          image: ogImage,
+          jobTitle: "Software Engineer",
+          sameAs: [
+            "https://www.linkedin.com/in/biagiarchiefz",
+            "https://github.com/Biagiarchiefz",
+            "https://dribbble.com/Biagii",
+            "https://www.instagram.com/biagiarchiefz/",
+          ],
+        })
+      : null;
 
   return (
     <Head>
@@ -60,6 +83,10 @@ const Seo = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+
+      {personJsonLd && (
+        <script type="application/ld+json">{personJsonLd}</script>
+      )}
     </Head>
   );
 };

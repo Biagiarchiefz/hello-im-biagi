@@ -19,7 +19,7 @@ const ExperienceModalFooter = ({ experience }: ExperienceModalFooterProps) => {
           href={experience.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg border border-[#7E62F3] px-4 py-2 text-sm font-semibold text-[#EDF0F7] outline-none transition-colors hover:bg-[#7E62F3]/20 focus-visible:ring-2 focus-visible:ring-[#7E62F3]"
+          className="inline-flex items-center gap-2 border border-[#7E62F3] px-4 py-2 text-sm font-semibold text-[#EDF0F7] outline-none transition-colors hover:bg-[#7E62F3]/20 focus-visible:ring-2 focus-visible:ring-[#7E62F3]"
         >
           <Github size={16} /> GitHub
         </a>
@@ -29,7 +29,7 @@ const ExperienceModalFooter = ({ experience }: ExperienceModalFooterProps) => {
           href={experience.demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-[#7E62F3] px-4 py-2 text-sm font-semibold text-white outline-none transition-colors hover:bg-[#7E62F3]/80 focus-visible:ring-2 focus-visible:ring-[#7E62F3] focus-visible:ring-offset-2 focus-visible:ring-offset-[#181818]"
+          className="inline-flex items-center gap-2 bg-[#7E62F3] px-4 py-2 text-sm font-semibold text-white outline-none transition-colors hover:bg-[#7E62F3]/80 focus-visible:ring-2 focus-visible:ring-[#7E62F3] focus-visible:ring-offset-2 focus-visible:ring-offset-[#181818]"
         >
           <TvMinimalPlay size={16} /> Live Demo
         </a>

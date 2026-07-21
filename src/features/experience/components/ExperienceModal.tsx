@@ -114,7 +114,7 @@ const ExperienceModal = ({
               }
             : undefined
         }
-        className={`flex flex-col overflow-hidden rounded-2xl border border-[#7E62F3]/30 bg-[#181818]/90 shadow-2xl outline-none backdrop-blur-xl ${
+        className={`flex flex-col overflow-hidden rounded-[3px] border border-[#EDF0F7]/10 border-t-2 border-t-[#7E62F3] bg-[#181818] shadow-2xl outline-none ${
           isDesktop
             ? ""
             : "absolute bottom-0 left-0 right-0 max-h-[90vh] rounded-b-none border-x-0 border-b-0"

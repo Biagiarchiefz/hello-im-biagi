@@ -29,10 +29,10 @@ const ExperienceModalHeader = ({
       </button>
 
       <div className="pr-10">
-        <span className="inline-block rounded-full bg-[#7E62F3]/20 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#7E62F3]">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#7E62F3]">
           {experience.type}
         </span>
-        <h2 id={titleId} className="mt-2 text-xl font-bold text-[#EDF0F7]">
+        <h2 id={titleId} className="mt-1.5 text-xl font-bold text-[#EDF0F7]">
           {experience.title}
         </h2>
         <p className="text-sm font-semibold text-[#7E62F3]">

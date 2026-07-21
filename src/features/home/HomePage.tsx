@@ -32,7 +32,7 @@ const HomePage = () => {
       <Seo
         title="Home"
         path="/"
-        description="Portfolio Biagi Archie Fais — Front-End Developer asal Indonesia yang berfokus pada React, TypeScript, dan Tailwind CSS. Lihat proyek & pengalaman terbaru."
+        description="Portfolio Biagi Archie Fais — Software Engineer asal Indonesia yang membangun aplikasi web end-to-end dengan React, TypeScript, dan Node.js. Lihat proyek & pengalaman terbaru."
       />
       <div className="bg-[#141414]">
         {/* section 1 profile */}
@@ -60,12 +60,12 @@ const HomePage = () => {
                 {...fadeIn}
                 className="text-[30px] md:text-[100px] relative font-bold leading-[110.2%]"
               >
-                Biagi Archie Fais, <br /> Front-End Developer
+                Biagi Archie Fais, <br /> Software Engineer
               </motion.h1>
               <p className="text-[13px] md:text-xl max-w-[547px]">
-                Front-End Developer based in Indonesia, continuously learning
-                and exploring front-end technologies. Open for collaboration and
-                creative opportunities.
+                Software Engineer based in Indonesia, building web applications
+                end-to-end — from polished interfaces to the APIs and databases
+                behind them. Open for frontend, backend, and full-stack roles.
               </p>
 
               <div className="flex items-center gap-3 md:gap-5 mt-3 md:mt-8">
@@ -77,7 +77,7 @@ const HomePage = () => {
                     </div>
                   </div>
                 </Link>
-                <Link to="www.linkedin.com/in/biagiarchiefz">
+                <Link to="https://www.linkedin.com/in/biagiarchiefz/">
                   <Linkedin className="text-[#7E62F3] w-[20px] h-[20px] md:w-[30px] md:h-[30px]" />
                 </Link>
                 <Link to="https://github.com/Biagiarchiefz">
@@ -112,7 +112,7 @@ const HomePage = () => {
               className="w-[278px] md:w-[773px] absolute top-0 left-0"
             />
           </div>
-    
+
           <div className="flex flex-col items-center md:flex-row md:justify-between md:mt-15">
             {/* Canvas widget khusus browser. <ClientOnly> membuatnya TIDAK
                 dirender saat pre-render (SSG) — kalau dipaksa, komponen lazy ini
@@ -139,23 +139,25 @@ const HomePage = () => {
             </ClientOnly>
             <div className="text-[#EDF0F7] px-[20px] w-[360px] md:w-[743px] flex flex-col gap-8 mt-5 text-[13px] md:text-lg">
               <p className="">
-                I’m a Front-End Developer and an undergraduate student at
-                Pasundan University, with a growing focus on becoming a
-                Full-Stack Developer. I enjoy learning new things and
-                continuously improving my skills in modern web development.
+                I’m a Software Engineer and an undergraduate student at Pasundan
+                University. I build web applications end-to-end — owning a
+                feature from the interface people see down to the API and data
+                layer behind it.
               </p>
               <p>
-                My current tech stack includes HTML, CSS, Tailwind CSS, Figma,
-                React, JavaScript, TypeScript, and Next.js. Recently, I’ve also
-                expanded my expertise into backend development using Node.js and
-                Express, allowing me to build and integrate RESTful APIs and
-                manage server-side logic.
+                On the interface side, I work with React, Next.js, TypeScript,
+                and Tailwind CSS. On the server side, I build REST APIs with
+                Node.js and Express, backed by databases like PostgreSQL, MySQL,
+                and Supabase with Prisma as the ORM. Git, GitHub, and Figma
+                round out my day-to-day workflow, from version control to design
+                handoff.
               </p>
               <p>
-                I’m passionate about building user-friendly and visually
-                appealing web interfaces while also understanding how systems
-                work behind the scenes. I’m always excited to explore new
-                technologies and collaborate on creative and impactful projects.
+                I care about products that feel good to use and about the
+                systems that make them work. I’m always excited to learn new
+                technologies and collaborate on creative, impactful projects —
+                whether the role calls for frontend, backend, or full-stack
+                work.
               </p>
             </div>
           </div>
